@@ -276,6 +276,13 @@ textarea{width:100%;border:2px solid var(--line);border-radius:12px;padding:12px
 .ov.tr{right:10px;top:10px;left:auto;font-size:.7rem;font-weight:700;padding:4px 8px}
 .screen.full .hint3d{top:auto;bottom:10px}
 .screen.full .scene .cap3d{top:10px}
+
+.frow{display:flex;gap:10px;align-items:center}
+.frow .btn{flex:1;min-width:0}
+.skip{flex:none;background:none;border:0;color:var(--muted);font-weight:700;font-size:.85rem;padding:10px 4px;text-decoration:underline;text-underline-offset:3px}
+.skip:hover{color:var(--ink)}
+.screen>*{flex-shrink:0}
+.screen.full>.scene{flex-shrink:1}
 </style>
 <style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}</style>
 </head>
@@ -1159,7 +1166,7 @@ function openMission(t,mi){
   top.querySelector('button').onclick=()=>topic(t);
   const scr=el(`<div class="screen gut"></div>`);
   const host=el(`<div class="host gut"><div class="av" data-av>${DW}</div><div class="bub" data-bub></div></div>`);
-  const foot=el(`<div class="foot gut"><p class="fbtxt" hidden></p><button type="button" class="btn block" disabled>Dawam etiw</button></div>`);
+  const foot=el(`<div class="foot gut"><p class="fbtxt" hidden></p><div class="frow"><button type="button" class="skip" data-skip>Ótkizip jiberiw ›</button><button type="button" class="btn block" disabled>Dawam etiw</button></div></div>`);
   const btn=foot.querySelector('.btn'),fbt=foot.querySelector('.fbtxt');
   app.append(top,scr,host,foot);
   requestAnimationFrame(()=>top.querySelector('.pbar i').style.width=((si+1)/steps.length*100)+'%');
@@ -1169,13 +1176,16 @@ function openMission(t,mi){
   T[st.type](scr,c,st);
   if(c.full)scr.classList.add('full');
   if(c.check)btn.textContent='Tekseriw';
+  const skipB=foot.querySelector('[data-skip]');if(st.type==='result')skipB.hidden=true;
+  const advance=()=>{si++;if(si<steps.length)run();else finish(t,mi);};
+  skipB.onclick=()=>{if(c.check&&phase==='answer')scores.push(0);advance();};
   btn.onclick=()=>{
-   if(c.check&&phase==='answer'){const r=c.onCheck();c.locked=true;phase='done';if(r.ok)quizScore++;scores.push(r.ok?1:0);
+   if(c.check&&phase==='answer'){skipB.hidden=true;const r=c.onCheck();c.locked=true;phase='done';if(r.ok)quizScore++;scores.push(r.ok?1:0);
     foot.classList.add(r.ok?'ok':'no');fbt.hidden=false;fbt.innerHTML=`${r.ok?pick(PRAISE):'Qáte.'}<span>${r.text}</span>`;
     btn.className='btn block '+(r.ok?'ok':'no');btn.textContent='Dawam etiw';say(r.ok?pick(PRAISE):pick(OOPS),r.ok?'happy':'sad');return;}
    if(c.intercept&&c.intercept())return;
    if(st.type==='result')P.stars[mKey(t,mi)]=Math.max(P.stars[mKey(t,mi)]||0,c.stars);
-   si++;if(si<steps.length)run();else finish(t,mi);};
+   advance();};
   requestAnimationFrame(()=>requestAnimationFrame(()=>scr.querySelectorAll('.tr i').forEach(i=>i.style.width=i.style.getPropertyValue('--w'))));
   const hostTxt=st.host||(c.check?pick(['Durıs juwaptı tańla.','Oylap kór hám tańla!','Sen bul sorawdı bileseń!']):st.type==='result'?'':pick(['Dıqqat penen oqı!','Qızıq pa? Dawam et!','Bul júdá áhmiyetli maǵlıwmat.','Eslep qal, testte kerek boladı!']));
   if(hostTxt)setTimeout(()=>{const b=document.querySelector('[data-bub]');if(b&&!b.textContent)say(hostTxt)},120);
