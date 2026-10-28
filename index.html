@@ -204,24 +204,6 @@ td.r,th.r{text-align:right}
 .sheet .pane{background:var(--surface);width:100%;border-radius:22px 22px 0 0;max-height:85%;overflow:auto;display:grid;gap:10px;padding-block:18px calc(18px + env(safe-area-inset-bottom,0px))}
 .sheet ul{margin:0;padding-left:1.2em;display:grid;gap:6px;font-size:.92rem}
 
-/* character */
-.dw{overflow:visible;width:100%;height:100%}
-.dw .dw-all{animation:bob 3.2s ease-in-out infinite;transform-box:view-box;transform-origin:60px 170px}
-.dw .dw-eyes{animation:blink 4.5s infinite;transform-box:fill-box;transform-origin:center}
-.dw .dw-arm{transform-box:view-box;transform-origin:88px 104px}
-.dw .dw-open,.dw .dw-frown{opacity:0}
-.dw.talk .dw-smile{opacity:0}
-.dw.talk .dw-open{opacity:1;animation:mouth .18s infinite alternate;transform-box:fill-box;transform-origin:center}
-.dw.happy .dw-all{animation:jump .45s ease-out 2}
-.dw.happy .dw-arm,.dw.wave .dw-arm{animation:wave .5s ease-in-out 3}
-.dw.sad .dw-smile{opacity:0}.dw.sad .dw-frown{opacity:1}
-.dw.sad .dw-arm{transform:rotate(60deg)}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
-@keyframes mouth{from{transform:scaleY(.4)}to{transform:scaleY(1.1)}}
-@keyframes jump{0%{transform:translateY(0)}40%{transform:translateY(-14px)}100%{transform:translateY(0)}}
-@keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(-22deg)}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 @media (max-height:640px){.host .av{width:48px;height:62px}.host .bub{font-size:.85rem}}
 /* multi-topic additions */
 .chhead{display:grid;gap:2px;margin-top:10px}
@@ -283,6 +265,59 @@ textarea{width:100%;border:2px solid var(--line);border-radius:12px;padding:12px
 .skip:hover{color:var(--ink)}
 .screen>*{flex-shrink:0}
 .screen.full>.scene{flex-shrink:1}
+/* ===== Dáwlet v2 ===== */
+.dw{overflow:visible;width:100%;height:100%;display:block}
+.dw *{transform-box:view-box}
+.dw .dw-all{transform-origin:80px 212px;animation:dwBob 3.6s ease-in-out infinite}
+.dw .dw-body{transform-origin:80px 196px;animation:dwBreath 3.6s ease-in-out infinite}
+.dw .dw-head{transform-origin:80px 118px;animation:dwSway 5.2s ease-in-out infinite;transition:transform .35s}
+.dw .dw-arm-l{transform-origin:57px 124px;animation:dwArmL 3.6s ease-in-out infinite;transition:transform .35s}
+.dw .dw-arm-r{transform-origin:103px 124px;animation:dwArmR 3.6s ease-in-out infinite;transition:transform .35s}
+.dw .dw-eyes{transform-box:fill-box;transform-origin:center;transition:transform .07s}
+.dw.blink .dw-eyes{transform:scaleY(.08)}
+.dw .dw-pupils{transition:transform .12s}
+.dw .dw-joy,.dw .dw-drop,.dw .dw-fx{opacity:0}
+.dw .dw-brow-l,.dw .dw-brow-r{transform-box:fill-box;transform-origin:center;transition:transform .3s}
+.dw .m{display:none}
+.dw:not([data-mouth]) .m-smile,.dw[data-mouth="smile"] .m-smile,.dw[data-mouth="mid"] .m-mid,.dw[data-mouth="open"] .m-open,.dw[data-mouth="grin"] .m-grin,.dw[data-mouth="frown"] .m-frown{display:inline}
+/* talk */
+.dw.talk .dw-head{animation:dwNod .5s ease-in-out infinite}
+.dw.talk .dw-arm-r{animation:dwGesture 1.6s ease-in-out infinite}
+/* wave */
+.dw.wave .dw-arm-r{animation:dwWave .45s ease-in-out 4 alternate;transform:rotate(-118deg)}
+/* happy */
+.dw.happy .dw-all{animation:dwJump .55s cubic-bezier(.3,.7,.4,1) 2}
+.dw.happy .dw-arm-l{animation:none;transform:rotate(112deg)}
+.dw.happy .dw-arm-r{animation:none;transform:rotate(-112deg)}
+.dw.happy .dw-eyes{opacity:0}
+.dw.happy .dw-joy{opacity:1}
+.dw.happy .dw-fx{animation:dwFx .9s ease-out 1 forwards}
+.dw.happy .dw-brow-l{transform:translateY(-3px)}.dw.happy .dw-brow-r{transform:translateY(-3px)}
+/* sad */
+.dw.sad .dw-head{animation:none;transform:translateY(3px) rotate(5deg)}
+.dw.sad .dw-arm-l{animation:none;transform:rotate(-6deg)}
+.dw.sad .dw-arm-r{animation:none;transform:rotate(6deg)}
+.dw.sad .dw-brow-l{transform:rotate(-14deg) translateY(1px)}.dw.sad .dw-brow-r{transform:rotate(14deg) translateY(1px)}
+.dw.sad .dw-drop{animation:dwDrop 1.2s ease-in 1 forwards}
+.dw.sad .dw-all{animation:dwShake .5s ease-in-out 1}
+@keyframes dwBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-2.5px)}}
+@keyframes dwBreath{0%,100%{transform:scale(1,1)}50%{transform:scale(1.012,1.022)}}
+@keyframes dwSway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2.5deg)}}
+@keyframes dwNod{0%,100%{transform:rotate(-1.5deg) translateY(0)}50%{transform:rotate(1.5deg) translateY(1.2px)}}
+@keyframes dwArmL{0%,100%{transform:rotate(0)}50%{transform:rotate(3deg)}}
+@keyframes dwArmR{0%,100%{transform:rotate(0)}50%{transform:rotate(-3deg)}}
+@keyframes dwGesture{0%,100%{transform:rotate(-8deg)}50%{transform:rotate(-38deg)}}
+@keyframes dwWave{from{transform:rotate(-100deg)}to{transform:rotate(-132deg)}}
+@keyframes dwJump{0%{transform:translateY(0) scale(1.06,.92)}35%{transform:translateY(-22px) scale(.95,1.06)}70%{transform:translateY(0) scale(1.05,.94)}100%{transform:translateY(0) scale(1,1)}}
+@keyframes dwShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-4px)}40%{transform:translateX(4px)}60%{transform:translateX(-3px)}80%{transform:translateX(2px)}}
+@keyframes dwFx{0%{opacity:0;transform:scale(.4)}25%{opacity:1}100%{opacity:0;transform:scale(1.25) translateY(-8px)}}
+@keyframes dwDrop{0%{opacity:0;transform:translateY(-4px)}30%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+.dw .dw-fx{transform-origin:80px 60px}
+@media (prefers-reduced-motion:reduce){.dw *{animation:none!important;transition:none!important}}
+.hero .av{width:124px;height:172px}
+.host .av{width:66px;height:92px}
+.reward .av{width:150px;height:208px}
+@media (max-height:640px){.host .av{width:50px;height:70px}}
 </style>
 <style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}</style>
 </head>
@@ -778,44 +813,106 @@ const ICONS={
  pen:'<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16z" fill="currentColor"/></svg>'
 };
 
-/* ================= Dáwlet ================= */
-const SKIN="#E3B48C",LINE="#2A1A12",ROBE="#8E2B2B",GOLD="#D9A441";
-function horn(x,y,s){return `<path d="M${x} ${y} c${-3*s} ${-4*s} ${-8*s} ${-1.5*s} ${-5.5*s} ${2.5*s} c${1.2*s} ${1.6*s} ${3.2*s} ${0.8*s} ${2.6*s} ${-0.6*s} M${x} ${y} c${3*s} ${-4*s} ${8*s} ${-1.5*s} ${5.5*s} ${2.5*s} c${-1.2*s} ${1.6*s} ${-3.2*s} ${0.8*s} ${-2.6*s} ${-0.6*s}" fill="none" stroke="${LINE}" stroke-width="1.3" stroke-linecap="round"/>`}
-const DW=(()=>{let stripes='';for(let x=36;x<=84;x+=6)stripes+=`<line x1="${x}" y1="96" x2="${x+(x-60)*0.25}" y2="164" stroke="#741F22" stroke-width="1.6" opacity=".7"/>`;
- let horns='';for(let x=30;x<=90;x+=12)horns+=horn(x,164,1);
- return `<svg class="dw" viewBox="0 0 120 172" aria-hidden="true"><g class="dw-all">
-  <ellipse cx="60" cy="169" rx="36" ry="3.5" fill="#000" opacity=".12"/>
-  <path d="M32 104 Q22 124 25 142" stroke="${ROBE}" stroke-width="13" stroke-linecap="round" fill="none"/>
-  <circle cx="25" cy="146" r="5.5" fill="${SKIN}" stroke="${LINE}" stroke-width="1.5"/>
-  <path d="M31 99 Q60 88 89 99 L99 162 Q60 170 21 162 Z" fill="${ROBE}" stroke="${LINE}" stroke-width="2"/>${stripes}
-  <path d="M21 157 Q60 165 99 157 L99.6 163 Q60 171 20.4 163 Z" fill="${GOLD}" stroke="${LINE}" stroke-width="1.2"/>${horns}
-  <path d="M50 95 L60 114 L70 95 Z" fill="#F3EFE6" stroke="${LINE}" stroke-width="1.5"/>
-  <path d="M49 94 L60 115 L60 160" stroke="${GOLD}" stroke-width="4" fill="none"/><path d="M71 94 L60 115" stroke="${GOLD}" stroke-width="4" fill="none"/>
-  <path d="M26 126 Q60 135 94 126 L95 137 Q60 146 25 137 Z" fill="#2E7D4F" stroke="${LINE}" stroke-width="1.5"/>
-  <path d="M68 138 l4 14 l5 -2 l-3 -13z" fill="#2E7D4F" stroke="${LINE}" stroke-width="1.2"/>
-  <g class="dw-arm"><path d="M88 104 Q103 94 105 77" stroke="${ROBE}" stroke-width="13" stroke-linecap="round" fill="none"/><circle cx="105" cy="71" r="6" fill="${SKIN}" stroke="${LINE}" stroke-width="1.5"/></g>
+/* ================= Dáwlet v2: original Karakalpak boy guide ================= */
+const LINE="#2A1A12";
+const DW=(()=>{
+ // qos-múyiz (ram's horn) ornament
+ const horn=(x,y,s=1)=>`<path d="M${x} ${y}c${-2.6*s} ${-3.6*s} ${-7.4*s} ${-1.4*s} ${-5*s} ${2.3*s}c${1.1*s} ${1.5*s} ${3*s} ${.7*s} ${2.4*s} ${-.6*s}M${x} ${y}c${2.6*s} ${-3.6*s} ${7.4*s} ${-1.4*s} ${5*s} ${2.3*s}c${-1.1*s} ${1.5*s} ${-3*s} ${.7*s} ${-2.4*s} ${-.6*s}" fill="none" stroke="#5A2A0E" stroke-width="1.2" stroke-linecap="round"/>`;
+ let hem='';for(let x=48;x<=112;x+=10.5)hem+=horn(x,197.5,.95);
+ let stripes='';for(let x=58;x<=102;x+=7){if(Math.abs(x-80)<5)continue;stripes+=`<path d="M${x} 124 L${x+(x-80)*.42} 192" stroke="#E0AE48" stroke-width="1" opacity=".35"/>`;}
+ let curls='';[[66,34],[80,31],[94,34],[57,46],[70,43],[84,43],[98,45],[108,52],[52,58],[64,55],[78,54],[92,55],[105,62]].forEach(([x,y])=>curls+=`<path d="M${x-4} ${y+1}q4-5 8 0" stroke="#4A4452" stroke-width="2" fill="none" stroke-linecap="round"/>`);
+ const star=(x,y,r,c)=>`<path d="M${x} ${y-r}L${x+r*.28} ${y-r*.28}L${x+r} ${y}L${x+r*.28} ${y+r*.28}L${x} ${y+r}L${x-r*.28} ${y+r*.28}L${x-r} ${y}L${x-r*.28} ${y-r*.28}Z" fill="${c}"/>`;
+ return `<svg class="dw" viewBox="0 0 160 222" aria-hidden="true">
+ <defs>
+  <linearGradient id="dwSkin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F1C8A0"/><stop offset="1" stop-color="#DFA77C"/></linearGradient>
+  <linearGradient id="dwRobe" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#B8353A"/><stop offset=".55" stop-color="#962A2F"/><stop offset="1" stop-color="#6E1C22"/></linearGradient>
+  <linearGradient id="dwSleeve" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A82F34"/><stop offset="1" stop-color="#7C2127"/></linearGradient>
+  <radialGradient id="dwHat" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#3B3642"/><stop offset="1" stop-color="#141217"/></radialGradient>
+  <linearGradient id="dwSash" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3FA06A"/><stop offset="1" stop-color="#23704A"/></linearGradient>
+ </defs>
+ <ellipse class="dw-shadow" cx="80" cy="214" rx="38" ry="5" fill="#000" opacity=".16"/>
+ <g class="dw-all">
+  <g class="dw-legs">
+   <rect x="64" y="186" width="13" height="20" rx="4" fill="#2C2B38"/><rect x="83" y="186" width="13" height="20" rx="4" fill="#2C2B38"/>
+   <path d="M60 203h18v7a3 3 0 01-3 3H58a3 3 0 01-3-3c0-4 2-7 5-7z" fill="#6B3E22" stroke="${LINE}" stroke-width="1.5"/>
+   <path d="M100 203H82v7a3 3 0 003 3h17a3 3 0 003-3c0-4-2-7-5-7z" fill="#6B3E22" stroke="${LINE}" stroke-width="1.5"/>
+  </g>
+  <g class="dw-body">
+   <path d="M55 120 Q80 110 105 120 L121 194 Q80 202 39 194 Z" fill="url(#dwRobe)" stroke="${LINE}" stroke-width="2" stroke-linejoin="round"/>
+   ${stripes}
+   <path d="M39.6 190 Q80 198 120.4 190 L121 194 Q80 202 39 194Z" fill="#E0AE48"/>
+   <path d="M38.5 191 Q80 199.5 121.5 191 L122.6 199 Q80 207 37.4 199Z" fill="#E0AE48" stroke="${LINE}" stroke-width="1.4"/>${hem}
+   <path d="M69 118 L80 138 L91 118 Z" fill="#F6F1E6" stroke="${LINE}" stroke-width="1.5" stroke-linejoin="round"/>
+   <path d="M74 120 L80 131 L86 120" fill="none" stroke="#D9CDB4" stroke-width="1.2"/>
+   <path d="M67.5 117 L80 140 L80 198" stroke="#E0AE48" stroke-width="4.5" fill="none" stroke-linejoin="round"/>
+   <path d="M92.5 117 L80 140" stroke="#E0AE48" stroke-width="4.5" fill="none"/>
+   <path d="M67.5 117 L80 140 L80 198 M92.5 117 L80 140" stroke="#8A5A16" stroke-width="1" fill="none" stroke-dasharray="2 3"/>
+   <path d="M44 154 Q80 165 116 154 L117.5 166 Q80 177 42.5 166 Z" fill="url(#dwSash)" stroke="${LINE}" stroke-width="1.5"/>
+   <path d="M86 165 l5 20 l6-2.5 l-4-19z M92 165 l9 16 l5-4 l-7-14z" fill="#2E8B57" stroke="${LINE}" stroke-width="1.2" stroke-linejoin="round"/>
+   <circle cx="88" cy="164" r="4" fill="#E0AE48" stroke="${LINE}" stroke-width="1.2"/>
+  </g>
+  <g class="dw-arm-l">
+   <path d="M57 124 Q42 140 43 166" stroke="url(#dwSleeve)" stroke-width="16" stroke-linecap="round" fill="none"/>
+   <path d="M57 124 Q42 140 43 166" stroke="${LINE}" stroke-width="19" stroke-linecap="round" fill="none" opacity=".0"/>
+   <path d="M36 163 Q43 168 51 163" stroke="#E0AE48" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+   <g transform="translate(43 172)"><ellipse rx="7" ry="7.5" fill="url(#dwSkin)" stroke="${LINE}" stroke-width="1.5"/><path d="M-6 -2 q-4 1 -3 5" stroke="${LINE}" stroke-width="1.5" fill="url(#dwSkin)"/></g>
+  </g>
+  <g class="dw-arm-r">
+   <path d="M103 124 Q118 140 117 166" stroke="url(#dwSleeve)" stroke-width="16" stroke-linecap="round" fill="none"/>
+   <path d="M109 163 Q117 168 124 163" stroke="#E0AE48" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+   <g transform="translate(117 172)"><ellipse rx="7" ry="7.5" fill="url(#dwSkin)" stroke="${LINE}" stroke-width="1.5"/><path d="M6 -2 q4 1 3 5" stroke="${LINE}" stroke-width="1.5" fill="url(#dwSkin)"/></g>
+  </g>
   <g class="dw-head">
-   <rect x="53" y="84" width="14" height="12" rx="4" fill="${SKIN}"/>
-   <circle cx="37" cy="68" r="6" fill="${SKIN}" stroke="${LINE}" stroke-width="1.5"/><circle cx="83" cy="68" r="6" fill="${SKIN}" stroke="${LINE}" stroke-width="1.5"/>
-   <ellipse cx="60" cy="67" rx="23" ry="24" fill="${SKIN}" stroke="${LINE}" stroke-width="2"/>
-   <path d="M36 52 Q37 12 60 8 Q83 12 84 52 Z" fill="#1D1B1F" stroke="${LINE}" stroke-width="1.5"/>
-   <path d="M46 22 q3 -3 6 0 M62 16 q3 -3 6 0 M54 32 q3 -3 6 0 M70 30 q3 -3 6 0 M44 38 q3 -3 6 0" stroke="#4A454F" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-   <path d="M33 45 Q60 37 87 45 L88 55 Q60 48 32 55 Z" fill="#33303A" stroke="${LINE}" stroke-width="1.5"/>
-   <path d="M45 59 Q50 56 55 59" stroke="${LINE}" stroke-width="2.2" fill="none" stroke-linecap="round"/><path d="M65 59 Q70 56 75 59" stroke="${LINE}" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-   <g class="dw-eyes"><ellipse cx="50.5" cy="66" rx="3.2" ry="4" fill="${LINE}"/><ellipse cx="69.5" cy="66" rx="3.2" ry="4" fill="${LINE}"/><circle cx="51.6" cy="64.6" r="1.1" fill="#fff"/><circle cx="70.6" cy="64.6" r="1.1" fill="#fff"/></g>
-   <ellipse cx="44" cy="75" rx="4.5" ry="2.6" fill="#E07A6A" opacity=".45"/><ellipse cx="76" cy="75" rx="4.5" ry="2.6" fill="#E07A6A" opacity=".45"/>
-   <path d="M60 69 q-2 5 1 6" stroke="${LINE}" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-   <path class="dw-smile" d="M52 79 Q60 86 68 79" stroke="${LINE}" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-   <ellipse class="dw-open" cx="60" cy="81" rx="4.5" ry="3.6" fill="#7A2A2A" stroke="${LINE}" stroke-width="1.5"/>
-   <path class="dw-frown" d="M53 83 Q60 77 67 83" stroke="${LINE}" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-  </g></g></svg>`;})();
+   <rect x="72" y="106" width="16" height="14" rx="5" fill="#D99F74"/>
+   <g class="dw-ear"><circle cx="49" cy="88" r="8" fill="url(#dwSkin)" stroke="${LINE}" stroke-width="1.8"/><path d="M47 85 q3 3 0 6" stroke="#C9845E" stroke-width="1.6" fill="none"/></g>
+   <g class="dw-ear"><circle cx="111" cy="88" r="8" fill="url(#dwSkin)" stroke="${LINE}" stroke-width="1.8"/><path d="M113 85 q-3 3 0 6" stroke="#C9845E" stroke-width="1.6" fill="none"/></g>
+   <ellipse cx="80" cy="86" rx="31" ry="31.5" fill="url(#dwSkin)" stroke="${LINE}" stroke-width="2"/>
+   <path d="M50 76 q2 10 6 12 l1-14z M110 76 q-2 10 -6 12 l-1-14z" fill="#1D1A1F"/>
+   <path d="M46 72 C45 44 60 24 80 22 C100 24 115 44 114 72 Z" fill="url(#dwHat)" stroke="${LINE}" stroke-width="1.8"/>
+   ${curls}
+   <path d="M42 67 Q80 55 118 67 L119 79 Q80 68 41 79 Z" fill="#2A2630" stroke="${LINE}" stroke-width="1.6"/>
+   <path d="M44 72 Q80 61 116 72" stroke="#4A4452" stroke-width="1.4" fill="none" stroke-dasharray="3 3"/>
+   <g class="dw-brows"><path class="dw-brow-l" d="M60 77 Q67 72.5 74 76" stroke="#1D1A1F" stroke-width="3.2" fill="none" stroke-linecap="round"/><path class="dw-brow-r" d="M86 76 Q93 72.5 100 77" stroke="#1D1A1F" stroke-width="3.2" fill="none" stroke-linecap="round"/></g>
+   <g class="dw-eyes">
+    <ellipse cx="67.5" cy="88" rx="7" ry="8" fill="#fff" stroke="${LINE}" stroke-width="1.4"/><ellipse cx="92.5" cy="88" rx="7" ry="8" fill="#fff" stroke="${LINE}" stroke-width="1.4"/>
+    <g class="dw-pupils"><circle cx="67.5" cy="89" r="4.6" fill="#5A3519"/><circle cx="92.5" cy="89" r="4.6" fill="#5A3519"/><circle cx="67.5" cy="89" r="2.3" fill="#120B07"/><circle cx="92.5" cy="89" r="2.3" fill="#120B07"/><circle cx="69.3" cy="86.8" r="1.5" fill="#fff"/><circle cx="94.3" cy="86.8" r="1.5" fill="#fff"/></g>
+   </g>
+   <g class="dw-joy"><path d="M60.5 90 Q67.5 82 74.5 90 M85.5 90 Q92.5 82 99.5 90" stroke="${LINE}" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+   <ellipse cx="58" cy="99" rx="6" ry="3.6" fill="#EE8670" opacity=".45"/><ellipse cx="102" cy="99" rx="6" ry="3.6" fill="#EE8670" opacity=".45"/>
+   <path d="M80 92 q-3 6 1 8" stroke="#B9744E" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+   <g class="dw-mouth">
+    <path class="m m-smile" d="M70 104 Q80 112 90 104" stroke="${LINE}" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <g class="m m-mid"><ellipse cx="80" cy="106" rx="5" ry="4" fill="#6E1F23" stroke="${LINE}" stroke-width="1.8"/></g>
+    <g class="m m-open"><path d="M71 103 Q80 101 89 103 Q88 115 80 115 Q72 115 71 103Z" fill="#6E1F23" stroke="${LINE}" stroke-width="1.8" stroke-linejoin="round"/><path d="M74.5 111 Q80 108.5 85.5 111 Q83 114 80 114 Q77 114 74.5 111Z" fill="#E86A6A"/><path d="M73 103.5 Q80 102.5 87 103.5 L86.5 105.5 Q80 104.8 73.5 105.5Z" fill="#fff"/></g>
+    <g class="m m-grin"><path d="M68 102 Q80 100 92 102 Q90 117 80 117 Q70 117 68 102Z" fill="#6E1F23" stroke="${LINE}" stroke-width="1.8" stroke-linejoin="round"/><path d="M73 112 Q80 108 87 112 Q84 116 80 116 Q76 116 73 112Z" fill="#E86A6A"/><path d="M70 102.6 Q80 101.4 90 102.6 L89.4 105 Q80 104 70.6 105Z" fill="#fff"/></g>
+    <path class="m m-frown" d="M71 108 Q80 101 89 108" stroke="${LINE}" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+   </g>
+   <path class="dw-drop" d="M113 66 q4 7 0 10 q-4 -3 0 -10z" fill="#7CC4E8" stroke="#3B87AE" stroke-width="1"/>
+  </g>
+ </g>
+ <g class="dw-fx">${star(28,40,7,'#F2B33D')}${star(136,34,9,'#F2B33D')}${star(20,96,5,'#3FB5C8')}${star(144,92,6,'#3FB5C8')}${star(46,14,5,'#EE8670')}${star(118,10,6,'#2F9B5A')}</g>
+</svg>`;})();
 
-let typeT=null,moodT=null;
-function say(text,mood){const b=document.querySelector('[data-bub]'),d=document.querySelector('[data-av] .dw');if(!b||!text)return;
- clearInterval(typeT);clearTimeout(moodT);const set=m=>{if(!d)return;d.classList.remove('talk','happy','sad','wave');if(m)d.classList.add(m)};
- if(REDUCED){b.innerHTML=text;set(mood);return;}
- const plain=text.replace(/<[^>]+>/g,'');let i=0;set('talk');b.textContent='';
- typeT=setInterval(()=>{i+=2;b.textContent=plain.slice(0,i);if(i>=plain.length){clearInterval(typeT);b.innerHTML=text;set(mood);if(mood)moodT=setTimeout(()=>set(null),1600);}},24);}
+/* ---- life: blinking, eye tracking, talking mouth ---- */
+let typeT=null,moodT=null,mouthT=null;
+const allDw=()=>document.querySelectorAll('.dw');
+function setMood(m,ms){clearTimeout(moodT);allDw().forEach(d=>{d.classList.remove('talk','happy','sad','wave');if(m){void d.getBBox;d.classList.add(m);}});if(m&&ms)moodT=setTimeout(()=>allDw().forEach(d=>d.classList.remove(m)),ms);}
+function setMouth(k){allDw().forEach(d=>d.dataset.mouth=k);}
+(function blinkLoop(){if(!REDUCED){allDw().forEach(d=>{d.classList.add('blink');setTimeout(()=>d.classList.remove('blink'),140);});}setTimeout(blinkLoop,2200+Math.random()*3200);})();
+let lookRaf=null,lookPt=null;
+function look(){lookRaf=null;allDw().forEach(d=>{const p=d.querySelector('.dw-pupils');if(!p)return;const r=d.getBoundingClientRect();if(!r.width)return;
+ const cx=r.left+r.width*.5,cy=r.top+r.height*.4;let dx=0,dy=0;if(lookPt){dx=lookPt[0]-cx;dy=lookPt[1]-cy;const L=Math.hypot(dx,dy)||1,k=Math.min(1,L/220);dx=dx/L*2.6*k;dy=dy/L*2.2*k;}
+ p.setAttribute('transform',`translate(${dx.toFixed(2)} ${dy.toFixed(2)})`);});}
+addEventListener('pointermove',e=>{lookPt=[e.clientX,e.clientY];if(!lookRaf)lookRaf=requestAnimationFrame(look);},{passive:true});
+addEventListener('pointerdown',e=>{lookPt=[e.clientX,e.clientY];if(!lookRaf)lookRaf=requestAnimationFrame(look);},{passive:true});
+function say(text,mood){const b=document.querySelector('[data-bub]');if(!b||!text)return;
+ clearInterval(typeT);clearInterval(mouthT);
+ const finish=()=>{clearInterval(mouthT);setMouth(mood==='happy'?'grin':mood==='sad'?'frown':'smile');setMood(mood,mood?1800:0);if(mood)moodT=setTimeout(()=>{setMouth('smile');allDw().forEach(d=>d.classList.remove(mood))},1800);};
+ if(REDUCED){b.innerHTML=text;finish();return;}
+ const plain=text.replace(/<[^>]+>/g,'');let i=0;setMood('talk');
+ const shapes=['open','mid','smile','open','mid','grin'];mouthT=setInterval(()=>setMouth(pick(shapes)),95);
+ b.textContent='';typeT=setInterval(()=>{i+=2;b.textContent=plain.slice(0,i);if(i>=plain.length){clearInterval(typeT);b.innerHTML=text;finish();}},24);}
+
 const PRAISE=["Durıs! Bárekella!","Júdá jaqsı!","Ájayıp, dawam et!","Tap ózi!","Sen haqıyqıy geografseń!"],OOPS=["Qáte, biraq qorqpa – túsindirmeni oqı.","Hesh nárse etpeydi, endi bilip aldıń!","Bul júdá qıyın edi. Eslep qal!"];
 
 /* ================= 3D engine ================= */
