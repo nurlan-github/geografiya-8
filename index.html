@@ -395,6 +395,7 @@ textarea.code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem
 .cred dd{margin:0;line-height:1.45}
 .about{display:grid;gap:12px}
 @media (max-width:480px){.cred{grid-template-columns:1fr;gap:2px}.cred dd{margin-bottom:8px}}
+td.num{white-space:nowrap}
 </style>
 <style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}</style>
 </head>
@@ -414,17 +415,17 @@ DATA.maps={okrug:{img:'map_okrug',w:900,h:560},phys:{img:'map_phys',w:630,h:662}
 const PL_OKRUG=[["Nókis",392,396],["Moynaq",326,225],["Qońırat",276,319],["Jaslıq",170,203],["Taxtakópir",464,333],["Shımbay",406,354],["Kegeyli",344,363],["Xojeli",330,405],["Shomanay",305,380],["Tájenoy",261,351],["Qaraózek",376,324],["Taqıyatas",390,414],["Mańǵıt",421,437],["Beruniy",491,498],["Tórtkúl",510,522],["Qazaqdárya",343,274]];
 const PL_PHYS=[["Moynaq",364,200],["Jaslıq",224,203],["Qońırat",296,317],["Nókis",462,377],["Sarıqamıs kóli",277,428],["Aybúyir tumsıǵı",269,338],["Sultan Wáyis (Ashshıtaw)",436,420],["Úshtaǵan tóbesi",494,329],["Qarabawır qırı",130,285],["Ásekeawdan batıǵı",123,360],["Aral teńizi",340,105],["Bostan",581,468]];
 DATA.errata=[
- "12-bet: 24′ × 1,42 km = 34,08 km (darslikda 34,8). To‘g‘ri javob ≈ 546,5 km (darslikda 547,2). Ilovada ikkalasi ham to‘g‘ri deb qabul qilinadi.",
- "9-bet: Orol uzunligi \"265 mil (324 km)\" – 265 mil ≈ 426 km, raqamlardan biri xato.",
- "18-bet: 4-mavzu topshirig‘ida Qaplanqır ikki marta (2 va 13-band).",
- "25-bet: Amudaryo suvi ulushlari 86,5 + 15,5 + 2,9 = 104,9 %.",
- "25-bet: Kegeyli (55,6 km) va Quwanıshjarma (87 km) \"ikkalasi 180 km\" deyilgan, yig‘indi 142,6 km.",
- "26-bet: Sharqiy Orol maydoni 1,5 km², hajmi 0,3 km³ – o‘rtacha chuqurlik 200 m chiqadi.",
- "27, 40, 60-betlar: saksovul ekilgan maydon turlicha (2024-yilda 217,8 ming ga; 2018–2024 da 1,8 mln ga; 2018–2025 da 1,8 mln ga; 2025-yilda 80 ga).",
- "33-bet: tuproqlardagi chirindi jadvali matn bilan mos emas (madaniy tuproq matnda 0,1–3 %, jadvalda 2–3 %). Ilovada bu jadval ishlatilmadi.",
- "51-bet: Quyi Amudaryo okrugining o‘rtacha yillik harorati 15,5–16,5 °C – Mo‘ynoqda 11,9 °C bo‘lgani uchun shubhali.",
- "14-mavzu: Shaqpaqtı \"1962-yilda ochilgan\" (3-mavzu) va \"1971-yilda birinchi mahsulot bergan\" (14-mavzu) – ikkisi ham to‘g‘ri bo‘lishi mumkin, o‘quvchilarga farqini tushuntiring.",
- "3D modellar sxematik: Orol chuqurliklari 29-betdagi 6 ta xaritadan, viloyat relyefi 49-betdagi okruglar xaritasidan taxminan tiklangan, balandliklar kattalashtirilgan."
+ "12-bet: 24′ × 1,42 km = 34,08 km (sabaqlıqta 34,8). Durıs juwap ≈ 546,5 km (sabaqlıqta 547,2). Qosımshada ekewi de durıs dep qabıl etiledi.",
+ "9-bet: Araldıń uzınlıǵı «265 mil (324 km)» – 265 mil ≈ 426 km, sanlardıń biri qáte.",
+ "18-bet: 4-tema tapsırmasında Qaplanqır eki ret berilgen (2 hám 13-bántler).",
+ "25-bet: Ámiwdárya suwınıń úlesleri 86,5 + 15,5 + 2,9 = 104,9 %.",
+ "25-bet: Kegeyli (55,6 km) hám Quwanıshjarma (87 km) «ekewi 180 km» delingen, al qosındısı 142,6 km.",
+ "26-bet: Shıǵıs Araldıń maydanı 1,5 km², kólemi 0,3 km³ – bunda ortasha tereńlik 200 m shıǵadı.",
+ "27, 40, 60-betler: seksewil egilgen maydan hár qıylı berilgen (2024-jılı 217,8 mıń ga; 2018–2024-jılları 1,8 mln ga; 2018–2025-jılları 1,8 mln ga; 2025-jılı 80 ga).",
+ "33-bet: topıraqlardaǵı shirindi kestesi tekst penen sáykes emes (mádeniy topıraq tekstte 0,1–3 %, kestede 2–3 %). Qosımshada bul keste paydalanılmadı.",
+ "51-bet: Tómengi Ámiwdárya okrugınıń ortasha jıllıq temperaturası 15,5–16,5 °C – Moynaqta 11,9 °C bolǵanı ushın gúmanlı.",
+ "Shaqpaqtı: 3-temada «1962-jılı ashılǵan», 14-temada «1971-jılı birinshi ónimin bergen» – ekewi de durıs bolıwı múmkin, oqıwshılarǵa parqın túsindiriń.",
+ "3D modeller sxematik: Aral tereńlikleri 29-betindegi 6 kartadan, aymaq relyefi 49-betindegi okruglar kartasınan shama menen dúzilgen, biyiklikler úlkeytilgen."
 ];
 
 /* ================= TOPICS: I BAP ================= */
@@ -1425,80 +1426,80 @@ function sendResults(){
  box.querySelector('[data-close]').onclick=closeSheet;sheet(box);
 }
 
-/* ---- teacher panel (Uzbek) ---- */
+/* ---- teacher panel (Karakalpak) ---- */
 function teacher(tab='res'){
  cleanupAll();app.innerHTML='';
- const top=el(`<div class="top gut"><button type="button" class="iconbtn" aria-label="Bosh sahifa">${BACK}</button><div style="flex:1;min-width:0"><div class="kicker">O‘qituvchi uchun</div><b style="display:block">O‘qituvchi paneli</b></div></div>`);
+ const top=el(`<div class="top gut"><button type="button" class="iconbtn" aria-label="Bas bet">${BACK}</button><div style="flex:1;min-width:0"><div class="kicker">Muǵallim ushın</div><b style="display:block">Muǵallim paneli</b></div></div>`);
  top.querySelector('button').onclick=home;
- const tabs=el(`<div class="tabs gut" role="tablist">${[['res','Natijalar'],['plan','Dars rejalari'],['crit','Baholash'],['note','Eslatmalar']].map(([k,n])=>`<button type="button" role="tab" aria-selected="${k===tab}" data-k="${k}">${n}</button>`).join('')}</div>`);
+ const tabs=el(`<div class="tabs gut" role="tablist">${[['res','Nátiyjeler'],['plan','Sabaq jobaları'],['crit','Bahalaw'],['note','Eskertpeler']].map(([k,n])=>`<button type="button" role="tab" aria-selected="${k===tab}" data-k="${k}">${n}</button>`).join('')}</div>`);
  tabs.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>teacher(b.dataset.k));
  const scr=el(`<div class="screen gut" style="padding-block:6px 24px"></div>`);
  app.append(top,tabs,scr);
  if(tab==='res')tRes(scr);if(tab==='plan')tPlan(scr);if(tab==='crit')tCrit(scr);if(tab==='note')tNote(scr);
 }
 function tRes(scr){
- scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.1rem">O‘quvchilar natijalari</h2>
-  <p class="sub">O‘quvchi bosh sahifada «Nátiyjeni muǵallimge jiberiw» tugmasini bosib, kodini sizga yuboradi (masalan, Telegram guruhiga). Kodlarni shu yerga qo‘ying – bir yoki bir nechta kodni birdan qo‘yish mumkin. Ma’lumotlar faqat shu qurilmada saqlanadi.</p>
-  <textarea rows="4" placeholder="QG8-... kodlarini shu yerga qo‘ying"></textarea>
-  <div class="row" style="justify-content:flex-start"><button type="button" class="btn" data-add>Qo‘shish</button><span class="cap" data-msg aria-live="polite"></span></div></div>`));
+ scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.1rem">Oqıwshılardıń nátiyjeleri</h2>
+  <p class="sub">Oqıwshı bas bette «Nátiyjeni muǵallimge jiberiw» túymesin basıp, kodın sizge jiberedi (mısalı, Telegram toparına). Kodlardı usı jerge qoyıń – bir yamasa birneshe kodtı birden qoyıwǵa boladı. Maǵlıwmatlar tek usı qurılmada saqlanadı.</p>
+  <textarea rows="4" placeholder="QG8-... kodların usı jerge qoyıń"></textarea>
+  <div class="row" style="justify-content:flex-start"><button type="button" class="btn" data-add>Qosıw</button><span class="cap" data-msg aria-live="polite"></span></div></div>`));
  const card=scr.lastChild,ta=card.querySelector('textarea');
  card.querySelector('[data-add]').onclick=()=>{const codes=ta.value.match(/QG8-[A-Za-z0-9_-]+/g)||[];let add=0,bad=0;
   codes.forEach(cd=>{const r=readCode(cd);if(!r||!r.name){bad++;return;}const i=P.cls.findIndex(x=>x.name.toLowerCase()===r.name.toLowerCase()&&x.cls===r.cls);
    if(i>=0){if(r.ts>=P.cls[i].ts)P.cls[i]=r;}else P.cls.push(r);add++;});
-  save();ta.value='';card.querySelector('[data-msg]').textContent=codes.length?`${add} ta kod qo‘shildi${bad?`, ${bad} ta kod noto‘g‘ri`:''}.`:'Kod topilmadi.';renderTable();};
+  save();ta.value='';card.querySelector('[data-msg]').textContent=codes.length?`${add} kod qosıldı${bad?`, ${bad} kod qáte`:''}.`:'Kod tabılmadı.';renderTable();};
  const wrap=el('<div class="card"></div>');scr.append(wrap);
  function renderTable(){
   const classes=[...new Set(P.cls.map(x=>x.cls))].sort();
-  if(!P.cls.length){wrap.innerHTML='<h2 class="h" style="font-size:1.05rem">Sinf jadvali</h2><p class="sub">Hali natija yo‘q. Birinchi kodni yuqoriga qo‘ying.</p><p class="cap">Sinash uchun o‘zingiz ham bosh sahifada istalgan mavzuni bajarib, kodni shu yerga qo‘yishingiz mumkin.</p>';return;}
+  if(!P.cls.length){wrap.innerHTML='<h2 class="h" style="font-size:1.05rem">Klass kestesi</h2><p class="sub">Elege shekem nátiyje joq. Birinshi kodtı joqarıǵa qoyıń.</p><p class="cap">Tekserip kóriw ushın bas bette qálegen temanı orınlap, óz kodıńızdı usı jerge qoyıwıńızǵa boladı.</p>';return;}
   let sel=wrap.dataset.cls||classes[0];if(!classes.includes(sel))sel=classes[0];
   const rows=P.cls.filter(x=>x.cls===sel).sort((a,b)=>a.name.localeCompare(b.name));
   const avg=x=>{const v=Object.values(x.res).map(r=>r.p);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):null};
   const colAvg=n=>{const v=rows.map(x=>x.res[n]?.p).filter(v=>v!=null);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):null};
-  wrap.innerHTML=`<div class="row" style="justify-content:space-between"><h2 class="h" style="font-size:1.05rem">Sinf jadvali</h2><div class="chips">${classes.map(c=>`<button type="button" class="chip" aria-pressed="${c===sel}" data-c="${c}">${c}</button>`).join('')}</div></div>
-   <div class="tbl wide"><table class="gtab"><thead><tr><th>№</th><th>O‘quvchi</th>${TOPICS.map(t=>`<th class="r" title="${t.title}">${t.n}</th>`).join('')}<th class="r">O‘rt.</th><th class="r">Baho</th></tr></thead>
-   <tbody class="num">${rows.map((x,i)=>{const a=avg(x);return `<tr><td>${i+1}</td><td class="nm">${x.name}</td>${TOPICS.map(t=>{const r=x.res[t.n];return `<td class="r ${r?(r.p>=86?'g5':r.p>=71?'g4':r.p>=56?'g3':'g2'):''} ${r&&r.d<t.missions.length?'part':''}" title="${r?r.d+'/'+t.missions.length+' bo‘lim':''}">${r?r.p:''}</td>`}).join('')}<td class="r"><b>${a??''}</b></td><td class="r"><b>${grade(a)}</b></td></tr>`}).join('')}
-   <tr class="avgrow"><td></td><td>Sinf o‘rtachasi</td>${TOPICS.map(t=>{const v=colAvg(t.n);return `<td class="r">${v??''}</td>`}).join('')}<td></td><td></td></tr></tbody></table></div>
-   <p class="cap">Raqamlar – bajarilgan bo‘limlar bo‘yicha to‘g‘ri javoblar foizi. <i>Kursiv</i> – mavzu hali to‘liq tugallanmagan. Bo‘sh katak – mavzu boshlanmagan.</p>
-   <div class="row" style="justify-content:flex-start"><button type="button" class="btn sm" data-tsv>Excel uchun nusxalash</button><button type="button" class="btn ghost sm" data-clear>${sel} sinfini o‘chirish</button></div><textarea class="code" rows="3" hidden readonly></textarea><p class="cap" data-st aria-live="polite"></p>`;
+  wrap.innerHTML=`<div class="row" style="justify-content:space-between"><h2 class="h" style="font-size:1.05rem">Klass kestesi</h2><div class="chips">${classes.map(c=>`<button type="button" class="chip" aria-pressed="${c===sel}" data-c="${c}">${c}</button>`).join('')}</div></div>
+   <div class="tbl wide"><table class="gtab"><thead><tr><th>№</th><th>Oqıwshı</th>${TOPICS.map(t=>`<th class="r" title="${t.title}">${t.n}</th>`).join('')}<th class="r">Ort.</th><th class="r">Baha</th></tr></thead>
+   <tbody class="num">${rows.map((x,i)=>{const a=avg(x);return `<tr><td>${i+1}</td><td class="nm">${x.name}</td>${TOPICS.map(t=>{const r=x.res[t.n];return `<td class="r ${r?(r.p>=86?'g5':r.p>=71?'g4':r.p>=56?'g3':'g2'):''} ${r&&r.d<t.missions.length?'part':''}" title="${r?r.d+'/'+t.missions.length+' bólim':''}">${r?r.p:''}</td>`}).join('')}<td class="r"><b>${a??''}</b></td><td class="r"><b>${grade(a)}</b></td></tr>`}).join('')}
+   <tr class="avgrow"><td></td><td>Klass boyınsha ortasha</td>${TOPICS.map(t=>{const v=colAvg(t.n);return `<td class="r">${v??''}</td>`}).join('')}<td></td><td></td></tr></tbody></table></div>
+   <p class="cap">Sanlar – orınlanǵan bólimler boyınsha durıs juwaplar procenti. <i>Kursiv</i> – tema ele tolıq tamamlanbaǵan. Bos keteshe – tema baslanbaǵan.</p>
+   <div class="row" style="justify-content:flex-start"><button type="button" class="btn sm" data-tsv>Excel ushın kóshiriw</button><button type="button" class="btn ghost sm" data-clear>${sel} klasın óshiriw</button></div><textarea class="code" rows="3" hidden readonly></textarea><p class="cap" data-st aria-live="polite"></p>`;
   wrap.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{wrap.dataset.cls=b.dataset.c;renderTable()});
-  wrap.querySelector('[data-tsv]').onclick=()=>{const tsv=['№\tO‘quvchi\tSinf\t'+TOPICS.map(t=>t.n+'-mavzu').join('\t')+'\tO‘rtacha\tBaho'].concat(rows.map((x,i)=>[i+1,x.name,x.cls,...TOPICS.map(t=>x.res[t.n]?.p??''),avg(x)??'',grade(avg(x))].join('\t'))).join('\n');
-   const ta=wrap.querySelector('textarea.code'),st=wrap.querySelector('[data-st]');ta.value=tsv;const fb=()=>{ta.hidden=false;ta.focus();ta.select();st.textContent='Jadval belgilandi – Ctrl+C bilan nusxalab, Excelga qo‘ying.'};
-   try{navigator.clipboard.writeText(tsv).then(()=>st.textContent='Nusxalandi. Excel yoki Google Sheetsga qo‘ying (Ctrl+V).',fb)}catch(e){fb()}};
-  let armed=false;wrap.querySelector('[data-clear]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Ishonchingiz komilmi? Yana bosing';return;}P.cls=P.cls.filter(x=>x.cls!==sel);save();renderTable();};
+  wrap.querySelector('[data-tsv]').onclick=()=>{const tsv=['№\tOqıwshı\tKlass\t'+TOPICS.map(t=>t.n+'-tema').join('\t')+'\tOrtasha\tBaha'].concat(rows.map((x,i)=>[i+1,x.name,x.cls,...TOPICS.map(t=>x.res[t.n]?.p??''),avg(x)??'',grade(avg(x))].join('\t'))).join('\n');
+   const ta=wrap.querySelector('textarea.code'),st=wrap.querySelector('[data-st]');ta.value=tsv;const fb=()=>{ta.hidden=false;ta.focus();ta.select();st.textContent='Keste belgilendi – Ctrl+C menen kóshirip, Excelge qoyıń.'};
+   try{navigator.clipboard.writeText(tsv).then(()=>st.textContent='Kóshirildi. Excel yamasa Google Sheetske qoyıń (Ctrl+V).',fb)}catch(e){fb()}};
+  let armed=false;wrap.querySelector('[data-clear]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Isenimińiz kámil me? Jáne basıń';return;}P.cls=P.cls.filter(x=>x.cls!==sel);save();renderTable();};
  }
  renderTable();
 }
 function tPlan(scr){
- scr.append(el(`<p class="sub">Har mavzu uchun 45 daqiqalik dars rejasi. Reja ilovadagi bo‘limlar asosida tuzilgan; sinfingizga moslab o‘zgartiring.</p>`));
+ scr.append(el(`<p class="sub">Hár bir tema ushın 45 minutlıq sabaq jobası. Joba qosımshadaǵı bólimler tiykarında dúzilgen; klasıńızǵa beyimlep ózgertiń.</p>`));
  TOPICS.forEach(t=>{const learn=t.missions.filter(m=>!m.quiz),quiz=t.missions.find(m=>m.quiz),tasks=(quiz&&quiz.tasks)||[];
-  const d=el(`<details class="card plan"><summary><b>${t.n}-mavzu.</b> ${t.title} <span class="cap">· ${t.pages}-bet</span></summary>
-   <div class="pl"><p><b>Maqsad:</b> o‘quvchilar «${t.title}» mavzusidagi asosiy tushunchalar, raqamlar va xarita obyektlarini biladi, ularni misollar bilan tushuntira oladi.</p>
+  const d=el(`<details class="card plan"><summary><b>${t.n}-tema.</b> ${t.title} <span class="cap">· ${t.pages}-bet</span></summary>
+   <div class="pl"><p><b>Maqset:</b> oqıwshılar «${t.title}» temasındaǵı tiykarǵı túsiniklerdi, sanlardı hám karta obyektlerin biledi, olardı mısallar menen túsindire aladı.</p>
    <ol class="steps">
-    <li><span class="tm">5 daq</span><div><b>Kirish.</b> Oldingi mavzuni takrorlash, uy vazifasini tekshirish. Mavzu savolini qo‘yish: «${t.intro.replace(/<[^>]+>/g,'')}»</div></li>
-    <li><span class="tm">15 daq</span><div><b>Yangi mavzu.</b> Darslikning ${t.pages}-betlari va ilovadagi bo‘limlar: ${learn.slice(0,Math.ceil(learn.length/2)).map(m=>'«'+m.title+'»').join(', ')||'—'}. Proyektor orqali birga ko‘rish tavsiya etiladi${learn.some(m=>m.steps.some(s=>/3d/.test(s.type)))?' (3D modelni sinfda birga aylantirib ko‘ring)':''}.</div></li>
-    <li><span class="tm">15 daq</span><div><b>Mustahkamlash.</b> O‘quvchilar juftlikda yoki mustaqil bajaradi: ${learn.slice(Math.ceil(learn.length/2)).map(m=>'«'+m.title+'»').join(', ')||'darslikdagi topshiriqlar'}.</div></li>
-    <li><span class="tm">7 daq</span><div><b>Nazorat.</b> ${quiz?`«${quiz.title}» (${quiz.steps.length} savol). Natija avtomatik hisoblanadi.`:'Og‘zaki so‘rov va ilovadagi mashqlar natijasi.'}</div></li>
-    <li><span class="tm">3 daq</span><div><b>Uy vazifasi.</b> ${tasks.length?tasks.join(' '):'Darslikdagi «Soraw hám tapsırmalar».'} O‘quvchi natija kodini o‘qituvchiga yuboradi.</div></li>
+    <li><span class="tm">5 min</span><div><b>Kirisiw.</b> Aldınǵı temanı qaytalaw, úy tapsırmasın tekseriw. Tema sorawın qoyıw: «${t.intro.replace(/<[^>]+>/g,'')}»</div></li>
+    <li><span class="tm">15 min</span><div><b>Jańa tema.</b> Sabaqlıqtıń ${t.pages}-betleri hám qosımshadaǵı bólimler: ${learn.slice(0,Math.ceil(learn.length/2)).map(m=>'«'+m.title+'»').join(', ')||'—'}. Proektor arqalı birge kóriw usınıladı${learn.some(m=>m.steps.some(s=>/3d/.test(s.type)))?' (3D modeldi klasta birge burap kóriń)':''}.</div></li>
+    <li><span class="tm">15 min</span><div><b>Bekkemlew.</b> Oqıwshılar jup bolıp yamasa óz betinshe orınlaydı: ${learn.slice(Math.ceil(learn.length/2)).map(m=>'«'+m.title+'»').join(', ')||'sabaqlıqtaǵı tapsırmalar'}.</div></li>
+    <li><span class="tm">7 min</span><div><b>Qadaǵalaw.</b> ${quiz?`«${quiz.title}» (${quiz.steps.length} soraw). Nátiyje avtomat túrde esaplanadı.`:'Awızsha soraw hám qosımshadaǵı shınıǵıwlar nátiyjesi.'}</div></li>
+    <li><span class="tm">3 min</span><div><b>Úy tapsırması.</b> ${tasks.length?tasks.join(' '):'Sabaqlıqtaǵı «Soraw hám tapsırmalar».'} Oqıwshı nátiyje kodın muǵallimge jiberedi.</div></li>
    </ol></div></details>`);scr.append(d);});
 }
 function tCrit(scr){
- scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.1rem">Baholash mezonlari</h2>
-  <p class="sub">Ilova har bir bo‘lim uchun to‘g‘ri bajarilgan topshiriqlar ulushini hisoblaydi. Mavzu natijasi – bajarilgan bo‘limlar o‘rtachasi; jadvalda mavzu to‘liq tugallanmagan bo‘lsa, raqam kursivda ko‘rsatiladi. Test savollari, xarita, saralash, juftlash va hisoblash topshiriqlari hisobga olinadi; o‘tkazib yuborilgan savol 0 ball.</p>
-  <div class="tbl"><table><thead><tr><th>Natija</th><th>Baho</th><th>Izoh</th></tr></thead><tbody>
-   <tr><td class="num">86–100 %</td><td><span class="pchip g5">5</span></td><td>Mavzuni to‘liq o‘zlashtirgan, raqam va obyektlarni aniq biladi</td></tr>
-   <tr><td class="num">71–85 %</td><td><span class="pchip g4">4</span></td><td>Asosiy tushunchalarni biladi, ayrim xatolar bor</td></tr>
-   <tr><td class="num">56–70 %</td><td><span class="pchip g3">3</span></td><td>Qisman o‘zlashtirgan, takrorlash kerak</td></tr>
-   <tr><td class="num">0–55 %</td><td><span class="pchip g2">2</span></td><td>Mavzuni qayta o‘rganish kerak</td></tr></tbody></table></div>
-  <p class="cap">Bu tavsiya etiladigan shkala. Yakuniy bahoni o‘qituvchi og‘zaki javob, daftar va loyiha ishlarini ham hisobga olib qo‘yadi.</p></div>`));
- scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.05rem">Ilova bilan ishlash tartibi</h2><ul class="ul">
-  <li>Dars boshida o‘quvchilar ism va sinfini bir marta kiritadi.</li><li>Natijalar o‘quvchi qurilmasida saqlanadi; bo‘limni qayta bajarsa, eng yaxshi natija olinadi.</li>
-  <li>Hafta oxirida o‘quvchilar kodini yuboradi – siz «Natijalar» bo‘limiga qo‘yasiz. Bir o‘quvchining yangi kodi eskisini almashtiradi.</li>
-  <li>Kod oddiy tekshiruv belgisiga ega: qo‘lda o‘zgartirilgan kod qabul qilinmaydi.</li></ul></div>`));
+ scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.1rem">Bahalaw kriteriyaları</h2>
+  <p class="sub">Qosımsha hár bir bólim ushın durıs orınlanǵan tapsırmalardıń úlesin esaplaydı. Tema nátiyjesi – orınlanǵan bólimlerdiń ortashası; kestede tema tolıq tamamlanbaǵan bolsa, san kursivte kórsetiledi. Test sorawları, karta, sortlaw, juplaw hám esaplaw tapsırmaları esapqa alınadı; ótkizip jiberilgen soraw 0 ball.</p>
+  <div class="tbl"><table><thead><tr><th>Nátiyje</th><th>Baha</th><th>Túsindirme</th></tr></thead><tbody>
+   <tr><td class="num">86–100 %</td><td><span class="pchip g5">5</span></td><td>Temanı tolıq ózlestirgen, sanlar hám obyektlerdi anıq biledi</td></tr>
+   <tr><td class="num">71–85 %</td><td><span class="pchip g4">4</span></td><td>Tiykarǵı túsiniklerdi biledi, ayırım qáteler bar</td></tr>
+   <tr><td class="num">56–70 %</td><td><span class="pchip g3">3</span></td><td>Bólekan ózlestirgen, qaytalaw kerek</td></tr>
+   <tr><td class="num">0–55 %</td><td><span class="pchip g2">2</span></td><td>Temanı qaytadan úyreniw kerek</td></tr></tbody></table></div>
+  <p class="cap">Bul usınılatuǵın shkala. Juwmaqlawshı bahanı muǵallim awızsha juwap, dápter hám joybar jumısların da esapqa alıp qoyadı.</p></div>`));
+ scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.05rem">Qosımsha menen islew tártibi</h2><ul class="ul">
+  <li>Sabaq basında oqıwshılar atı hám klasın bir ret kirgizedi.</li><li>Nátiyjeler oqıwshınıń qurılmasında saqlanadı; bólimdi qayta orınlasa, eń jaqsı nátiyje alınadı.</li>
+  <li>Hápte aqırında oqıwshılar kodın jiberedi – siz onı «Nátiyjeler» bólimine qoyasız. Bir oqıwshınıń jańa kodı eskisiniń ornına jazıladı.</li>
+  <li>Kodta ápiwayı tekseriw belgisi bar: qolda ózgertilgen kod qabıl etilmeydi.</li></ul></div>`));
 }
 function tNote(scr){
- const c=el(`<div class="card"><h2 class="h" style="font-size:1.1rem">Darslikda tekshirilishi kerak bo‘lgan raqamlar</h2><ul class="ul">${DATA.errata.map(e=>`<li>${e}</li>`).join('')}</ul></div>`);
- const r=el(`<div class="card"><h2 class="h" style="font-size:1.05rem">Shu qurilmadagi ma’lumotlar</h2><p class="sub">Bu qurilmadagi o‘quvchi natijalarini o‘chirish (sinf jadvaliga ta’sir qilmaydi).</p><div class="row" style="justify-content:flex-start"><button type="button" class="btn ghost sm" data-reset>Natijalarni o‘chirish</button></div></div>`);
- let armed=false;r.querySelector('[data-reset]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Ishonchingiz komilmi? Yana bosing';return;}const cls=P.cls,pr=P.profile;P={done:{},stars:{},notes:{},sc:{},cls,profile:pr};save();e.target.textContent='O‘chirildi';};
+ const c=el(`<div class="card"><h2 class="h" style="font-size:1.1rem">Sabaqlıqta tekseriliwi kerek bolǵan sanlar</h2><ul class="ul">${DATA.errata.map(e=>`<li>${e}</li>`).join('')}</ul></div>`);
+ const r=el(`<div class="card"><h2 class="h" style="font-size:1.05rem">Usı qurılmadaǵı maǵlıwmatlar</h2><p class="sub">Usı qurılmadaǵı oqıwshı nátiyjelerin óshiriw (klass kestesine tásir etpeydi).</p><div class="row" style="justify-content:flex-start"><button type="button" class="btn ghost sm" data-reset>Nátiyjelerdi óshiriw</button></div></div>`);
+ let armed=false;r.querySelector('[data-reset]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Isenimińiz kámil me? Jáne basıń';return;}const cls=P.cls,pr=P.profile;P={done:{},stars:{},notes:{},sc:{},cls,profile:pr};save();e.target.textContent='Óshirildi';};
  scr.append(c,r);
 }
 
