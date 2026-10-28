@@ -318,6 +318,76 @@ textarea{width:100%;border:2px solid var(--line);border-radius:12px;padding:12px
 .host .av{width:66px;height:92px}
 .reward .av{width:150px;height:208px}
 @media (max-height:640px){.host .av{width:50px;height:70px}}
+/* ===== 8-klass: calmer, study-app look ===== */
+.h{font-weight:800}
+.btn{border-radius:10px;box-shadow:none;text-transform:none;letter-spacing:0;font-weight:700;padding:13px 18px}
+.btn:active{transform:none;box-shadow:none;filter:brightness(.95)}
+.btn:disabled{box-shadow:none}
+.btn.ghost{border:1.5px solid var(--line);box-shadow:none;background:var(--surface)}
+.btn.gold,.btn.ok,.btn.no{box-shadow:none}
+.card{border-width:1px;border-radius:14px}
+.topic{box-shadow:none;border-radius:14px}
+.opt,.mi{box-shadow:none;border-width:1.5px;border-radius:10px}
+.opt.sel,.opt.right,.opt.wrong,.mi.sel{box-shadow:none}
+.flip .fc{box-shadow:none;border-radius:16px}.flip .bc{border-radius:16px;border-width:2px}
+.lakecard{box-shadow:none;border-width:2px;font-size:1.6rem;border-radius:14px}
+.pbar{height:8px}.pbar i{box-shadow:none}
+.iconbtn{border-width:1.5px;border-radius:10px}
+.host .bub,.hero .bub{border-width:1.5px;border-radius:14px 14px 14px 4px}
+.foot{border-top-width:1px}
+.stepn{font-weight:700;font-size:.85rem;color:var(--muted);flex:none}
+.who{display:grid;text-align:right;background:none;border:0;padding:4px 0;line-height:1.2}
+.who b{font-size:.9rem}.who span{font-size:.75rem;color:var(--muted);font-weight:700}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stats>div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;gap:2px}
+.stats b{font-size:1.25rem;font-weight:800;color:var(--pri)}
+.stats span{font-size:.75rem;color:var(--muted)}
+.tlist,.mlist{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.trow,.mrow{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
+.trow:hover,.mrow:hover{border-color:var(--pri)}
+.tnum{flex:none;width:34px;height:34px;border-radius:9px;background:var(--pri-soft);color:var(--pri);font-weight:800;display:grid;place-items:center}
+.trow.done .tnum{background:var(--ok-soft);color:var(--ok)}
+.tl{flex:1;min-width:0;display:grid;gap:3px}
+.tl b{font-weight:700;line-height:1.3}
+.tmeta{font-size:.78rem;color:var(--muted)}
+.tbar{height:4px;background:var(--line);border-radius:99px;overflow:hidden;margin-top:2px}.tbar i{display:block;height:100%;background:var(--ok);border-radius:99px}
+.pchip{flex:none;font-size:.75rem;font-weight:800;padding:4px 9px;border-radius:99px;background:var(--line);color:var(--muted);white-space:nowrap}
+.pchip.g5{background:var(--ok-soft);color:var(--ok)}.pchip.g4{background:var(--pri-soft);color:var(--pri)}.pchip.g3{background:var(--gold-soft);color:var(--gold-d)}.pchip.g2{background:var(--no-soft);color:var(--no)}
+.pchip.next{background:var(--pri);color:var(--on-pri)}
+.mi-ic{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--bg);color:var(--muted);border:1px solid var(--line);font-weight:800;font-size:.85rem}
+.mi-ic svg{width:18px;height:18px}
+.mrow.done .mi-ic{background:var(--ok);border-color:var(--ok);color:#fff}
+.mrow.next{border-color:var(--pri);border-width:1.5px}
+.mrow.next .mi-ic{background:var(--pri);border-color:var(--pri);color:var(--on-pri)}
+.reward .rs{display:none}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);flex:none;overflow-x:auto}
+.tabs button{background:none;border:0;padding:10px 12px;font-weight:700;color:var(--muted);border-bottom:2.5px solid transparent;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--pri);border-color:var(--pri)}
+.tbl.wide{overflow-x:auto;max-width:100%}
+.gtab{font-size:.8rem}.gtab th,.gtab td{padding:6px 7px;border-bottom:1px solid var(--line);white-space:nowrap}
+.gtab td.nm{white-space:nowrap;font-weight:600}
+.gtab td.g5{background:var(--ok-soft)}.gtab td.g4{background:var(--pri-soft)}.gtab td.g3{background:var(--gold-soft)}.gtab td.g2{background:var(--no-soft)}
+.gtab .avgrow td{font-weight:800;border-top:2px solid var(--line)}
+.plan summary{cursor:pointer;line-height:1.4}
+.plan .pl{display:grid;gap:8px;margin-top:10px}.plan p{margin:0}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.steps li{display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
+.tm{flex:none;font-weight:800;font-size:.75rem;background:var(--pri-soft);color:var(--pri);border-radius:6px;padding:3px 7px;min-width:52px;text-align:center}
+.frm{display:grid;grid-template-columns:2fr 1fr;gap:10px}
+.frm label{display:grid;gap:4px;font-size:.8rem;font-weight:700;color:var(--muted)}
+.frm input{font:inherit;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px}
+textarea.code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;word-break:break-all}
+@media (max-width:420px){.frm{grid-template-columns:1fr}.stats b{font-size:1.1rem}}
+/* calmer Dáwlet */
+.dw .dw-all{animation-duration:4.5s}
+.dw.happy .dw-all{animation:dwNodYes .6s ease-in-out 1}
+.dw.happy .dw-arm-l{transform:none;animation:dwArmL 3.6s ease-in-out infinite}
+.dw.happy .dw-arm-r{transform:rotate(-70deg)}
+.dw.happy .dw-fx{display:none}
+.dw.sad .dw-all{animation:none}
+.dw.sad .dw-drop{display:none}
+@keyframes dwNodYes{0%,100%{transform:translateY(0)}40%{transform:translateY(-4px)}}
+.gtab td.part{font-style:italic;opacity:.75}
 </style>
 <style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}</style>
 </head>
@@ -389,7 +459,7 @@ const TOPICS=[
   {type:'match',q:"Alımdı onıń xızmeti menen jupla",pairs:[["Xorezmiy","«Jerdiń súwreti» kitabı"],["Beruniy","Aǵıs tezligi hám jatqızıqlar nızamı"],["Ibn Sina","«Kitab ash-Shifo», minerallar"],["L.S. Berg","Aral faunası hám florası"],["J. Matmuratov","Qaraqalpaqstan geografiyası tiykarın salıwshı"],["A.A. Rafiqov","Araldıń qurǵaǵan ultanınıń landshaftı"]]},
   {type:'bars',k:'L.S. Berg dizimi',t:'Aral teńizinde jasaytuǵın túrler',data:[["Suw otları",110],["Kóp kletkalı omırtqasızlar",55],["Ápiwayı haywanlar",28],["Balıqlar",18,'var(--gold)'],["Joqarı ósimlikler",6,'var(--ok)']],unit:'túr',host:"L.S. Berg XIX–XX ásirler shegarasında Aral teńiziniń tirishiligin úyrengen."},
   {type:'choice',q:"Aral teńiziniń házirgi atı qaydan kelip shıqqan?",o:["Túrkiy «Arallar teńizi» atamasınan","Grek tilinen","Parsı «Xorezm teńizi» atamasınan","Arab tilinen"],a:0,e:"Áyyemgi parsı geografları «Xorezm teńizi» dep ataǵan, házirgi atı túrkiylerdiń «Arallar teńizi» atamasınan kelip shıqqan."}]},
- {title:'Test',icon:'test',sub:'5 soraw · 3 juldız',quiz:true,tasks:["Dáryalardıń tentirewi degende neni túsinesiz?","Aral teńizi atamasınıń kelip shıǵıwı qaysı sózden alınǵan?"],steps:[
+ {title:'Test',icon:'test',sub:'5 soraw',quiz:true,tasks:["Dáryalardıń tentirewi degende neni túsinesiz?","Aral teńizi atamasınıń kelip shıǵıwı qaysı sózden alınǵan?"],steps:[
   {type:'choice',q:"Qaraqalpaqstannıń qubla shetki noqatı qay jerde?",o:["Tórtkúl qalasınıń qublasında","Ústirttiń arqasında","Moynaqta","Qızılqumda"],a:0,e:"Qubla noqatı Tórtkúl qalasınıń qublasında (40°55′ a.k.)."},
   {type:'choice',q:"«Jerdiń súwreti» kitabın kim jazǵan?",o:["Ibn Sina","Xorezmiy","Beruniy","L.S. Berg"],a:1,e:"Muxammed al-Xorezmiydiń «Surat al-arz» kitabı."},
   {type:'choice',q:"Beruniy nızamı neni túsindiredi?",o:["Jatqızıqtıń úlkenligi aǵıs tezligine baylanıslı","Jer silkiniwleri","Klimat ózgeriwi","Ósimliklerdiń tarqalıwı"],a:0,e:"Jatqızılmanıń úlkenligi suw aǵısınıń tezligine tuwrı proporcional."},
@@ -443,7 +513,7 @@ const TOPICS=[
  {title:'Paydalı qazılmalar',icon:'gem',sub:'Sortlaw oyını',steps:[
   {type:'info',k:'Baylıqlar',t:'Jer astında ne bar?',html:`<div class="facts"><div><b>Gaz</b><span>Ústirtte 1962-jılı birinshi – Shaqpaqtı káni. Keyin Quwanısh, Aqsholaq, Qosqayır. Araldıń qurǵaǵan ultanında – Súrgil, Úrge, Berdaq.</span></div><div><b>Duz</b><span>As hám kaliy duzları – Barsakelmes, Qarawımbet, Aqkól.</span></div><div><b>Fosforit, temir</b><span>Xojakól, Xojeli átirapı, Aqtumsıq, Qaplanqır; temir – Xojakól, Tebinbulaq.</span></div></div>`},
   {type:'sort',q:"Kánniń túrin tańla",bins:[['g','Gaz'],['d','Duz'],['f','Fosforit / temir']],items:[["Shaqpaqtı","g"],["Quwanısh","g"],["Aqsholaq","g"],["Súrgil","g"],["Berdaq","g"],["Barsakelmes","d"],["Qarawımbet","d"],["Aqkól","d"],["Tebinbulaq","f","Bul – temir káni."],["Xojakól","f"],["Qulantaqır","f"]],n:9}]},
- {title:'Test',icon:'test',sub:'6 soraw · 3 juldız',quiz:true,tasks:["Aymaqtıń qaysı geologiyalıq eralarda Tetis teńiziniń astında bolǵanın anıqlań.","Google Earth arqalı Ámiwdárya deltasınıń házirgi jaǵdayın baqlap, sxema sızıń."],steps:[
+ {title:'Test',icon:'test',sub:'6 soraw',quiz:true,tasks:["Aymaqtıń qaysı geologiyalıq eralarda Tetis teńiziniń astında bolǵanın anıqlań.","Google Earth arqalı Ámiwdárya deltasınıń házirgi jaǵdayın baqlap, sxema sızıń."],steps:[
   {type:'choice',q:"Aymaqtıń eń biyik noqatı qaysı?",o:["Ashshıtaw, 478 m","Qarabawır, 292 m","Beltaw, 145 m","Jumırtaw, 170 m"],a:0,e:"Sultan Wáyis tawınıń Ashshıtaw shıńı – 478 m."},
   {type:'choice',q:"«Chink» degen ne?",o:["Plato hám biyikliklerdiń tik janbawırı","Qumlı tóbe","Duzlı kól","Dárya ańǵarı"],a:0,e:"Chinkler platonıń shetindegi tik jarlar."},
   {type:'choice',q:"Ústirtte birinshi gaz káni qaysı?",o:["Súrgil","Shaqpaqtı","Berdaq","Úrge"],a:1,e:"1962-jılı Shaqpaqtı gaz káni ashılǵan."},
@@ -490,7 +560,7 @@ const TOPICS=[
   {type:'match',q:"Máwsimdi onıń temperaturası menen jupla",pairs:[["Báhár","+5 °C tan +20 °C qa shekem kóteriledi"],["Jaz","+20 °C hám onnan joqarı"],["Gúz","+20 °C tan +5 °C qa tómenleydi"],["Qıs","+5 °C tan tómen"]]},
   {type:'bars',k:'Uzaqlıǵı',t:'Máwsimler neshe kún dawam etedi?',data:[["Qıs",139,'var(--pri)','117–139'],["Jaz",135,'var(--gold)','105–135'],["Báhár",55,'var(--ok)','45–55'],["Gúz",55,'var(--muted)','45–55']],unit:'kún',note:"Eń uzaq máwsim – qıs. Báhár hám gúz júdá qısqa."},
   {type:'choice',q:"Ne sebepten báhár hám gúz qısqa?",o:["Keskin kontinentallı klimatta temperatura tez ózgeredi","Teńiz jaqın bolǵanı ushın","Tawlar kóp bolǵanı ushın","Jawın kóp bolǵanı ushın"],a:0,e:"Keskin kontinentallı klimatta jıllılıq hám suwıq tez almasadı."}]},
- {title:'Test',icon:'test',sub:'6 soraw · 3 juldız',quiz:true,tasks:["Aymaq klimatınıń qáliplesiwinde qanday faktorlar tiykarǵı orındı iyeleydi?","Ne ushın biziń úlkemizde jawın-shashınlar az?"],steps:[
+ {title:'Test',icon:'test',sub:'6 soraw',quiz:true,tasks:["Aymaq klimatınıń qáliplesiwinde qanday faktorlar tiykarǵı orındı iyeleydi?","Ne ushın biziń úlkemizde jawın-shashınlar az?"],steps:[
   {type:'choice',q:"Úlkemizdiń klimatı qanday?",o:["Keskin kontinentallı hám qurǵaq","Teńiz klimatı","Iǵallı subtropikalıq","Tropikalıq"],a:0,e:"Keskin kontinentallı, hádden tıs qurǵaq."},
   {type:'choice',q:"Qaysı stanciyada jawın eń az?",o:["Bostan","Moynaq","Qaraqalpaqstan st.","Nókis"],a:0,e:"Bostanda 66,5 mm."},
   {type:'choice',q:"Eń uzaq máwsim qaysı?",o:["Qıs","Jaz","Báhár","Gúz"],a:0,e:"Qıs 117–139 kún."},
@@ -527,7 +597,7 @@ const TOPICS=[
  {title:'Kóller oyını',icon:'lake',sub:'10 kól · 2 topar',steps:[
   {type:'info',k:'Bul qızıq!',t:'Sudoche kóli',img:'flam1',cap:'Sudoche kólindegi flamingolar',html:`<p>Sudoche Aral teńiziniń qubla-batısında. Batıs jaǵası Ústirttiń Shıǵıs chinkine tutasqan.</p>`,host:"Kóllerdiń kópshiligi Ámiwdárya deltasında. Ayırımları dáryadan, ayırımları kanal hám izeykeshlerden payda bolǵan."},
   {type:'sort',bins:[['r','Dárya kólleri'],['k','Kanal kólleri']],items:[["Dawıtkól","r"],["Sudoche","r"],["Jıltırbas","r"],["Xojakól","r"],["Jamansay","r"],["Qarakól","r"],["Jekenli","r"],["Úshqulash","k"],["Turdıbay","k"],["Shanıshqılı","k"],["Ilmekól","k"],["Mashankól","k"],["Monshaqlı","k"],["Qaratereń","k"],["Atakól","k"],["Kókshiyel","k"],["Qırqqız","k"],["Aqshakól","k"]],n:10,host:"Hár kóldi durıs toparǵa jiber!"}]},
- {title:'Test',icon:'test',sub:'10 soraw · 3 juldız',quiz:true,tasks:["Usı aymaqtaǵı kóllerdi jazıwsız kartaǵa belgileń.","Ámiwdárya basseynine tiyisli dáryalardı atap kórsetiń.","Aral teńiziniń suwınıń azayıp ketiwine neler sebep bolǵan?"],steps:[
+ {title:'Test',icon:'test',sub:'10 soraw',quiz:true,tasks:["Usı aymaqtaǵı kóllerdi jazıwsız kartaǵa belgileń.","Ámiwdárya basseynine tiyisli dáryalardı atap kórsetiń.","Aral teńiziniń suwınıń azayıp ketiwine neler sebep bolǵan?"],steps:[
   {type:'choice',q:"Ámiwdárya qaysı muzlıqtan baslanadı?",o:["Fedchenko","Vrevskiy","Zarafshan","Pamir"],a:1,e:"Vrevskiy muzlıǵınan (4950 m)."},
   {type:'choice',q:"Grekler Ámiwdáryanı qalay ataǵan?",o:["Jayhun","Omul","Oks","Vaqshu"],a:2,e:"Grekler – Oks."},
   {type:'choice',q:"Qaysı eki dárya qosılıp Ámiwdárya boladı?",o:["Panj hám Vaxsh","Vaxan hám Pamir","Surxandárya hám Kafirnihan","Gunt hám Bartang"],a:0,e:"Panj hám Vaxsh."},
@@ -569,7 +639,7 @@ const TOPICS=[
  {title:'Topıraq galereyası',icon:'photo',sub:'4 súwret',steps:[
   {type:'gallery',items:[['taqir','Taqır','Jarılıp ketken tegis jer. Ámiwdárya deltasında ataw-ataw bolıp ushıraydı.'],['surqonir','Sur-qońır topıraq','Maydanı boyınsha birinshi orında: Sultan Wáyis, Beltaw, Qusxanataw.'],['kebir','Kebir topıraq','Jer betinde aq duz. Jer astı suwı 0,5–1 m tereńlikte.'],['madeniy','Mádeniy topıraq hám shól shegarası','Suwǵarılatuǵın jerler – tiykarǵı jer fondı.']],host:"Súwretlerdi kórip shıq."},
   {type:'info',k:'Mashqala',t:'Topıraq ónimdarlıǵı kemeymekte',html:`<p>Araldıń qurıwı, duzlı-qumlı shań, jer astı suwınıń kóteriliwi sebepli topıraq ónimdarlıǵı jıldan-jılǵa kemeymekte.</p><div class="fact"><b>Ilajlar:</b> seksewil egiw, kollektor-drenaj sistemasın rekonstrukciyalaw, kanallardı betonlaw.</div>`}]},
- {title:'Test',icon:'test',sub:'5 soraw · 3 juldız',quiz:true,tasks:["Jazıwsız kartaǵa topıraq túrlerin hár túrli reńde túsiriń.","Aymaqta qaysı topıraqlar eń kóp tarqalǵan?"],steps:[
+ {title:'Test',icon:'test',sub:'5 soraw',quiz:true,tasks:["Jazıwsız kartaǵa topıraq túrlerin hár túrli reńde túsiriń.","Aymaqta qaysı topıraqlar eń kóp tarqalǵan?"],steps:[
   {type:'choice',q:"Maydanı boyınsha birinshi orındaǵı topıraq?",o:["Sur-qońır","Batpaqlı","Otlaqlı","Mádeniy"],a:0,e:"Sur-qońır topıraqlar."},
   {type:'choice',q:"Ámiwdárya deltasında eń keń tarqalǵan topıraq?",o:["Taqırlı topıraq","Boz topıraq","Batpaqlı topıraq","Qumlı topıraq"],a:0,e:"Taqırlı topıraqlar."},
   {type:'choice',q:"Gidromorflı topıraqlarǵa qaysı kiredi?",o:["Batpaqlı, batpaqlı-otlaqlı, otlaqlı","Taqırlı hám taqırlar","Sur-qońır","Qumlı"],a:0,e:"Jer astı suwı jaqın bolǵan topıraqlar."},
@@ -592,7 +662,7 @@ const TOPICS=[
  {title:'Kim qay jerde jasaydı?',icon:'map',sub:'Sortlaw',steps:[
   {type:'info',k:'Delta eń bay',t:'Ámiwdárya deltası',html:`<div class="facts"><div><b>222</b><span>qus túri</span></div><div><b>31</b><span>sút emiziwshi</span></div><div><b>30</b><span>balıq túri</span></div></div><p>Deltada suw hám toǵay bar, sonıń ushın haywanat túrlerine eń bay.</p>`},
   {type:'sort',bins:[['d','Delta'],['u','Ústirt'],['q','Qızılqum']],items:[["Ondatra","d"],["Toǵay pıshıǵı","d"],["Qırǵawıl","d"],["Porsıq","d"],["Ústirt qoyı","u"],["Sayǵaq","u"],["Qaraquyrıq kiyik","u"],["Eshkemer","q","Uzınlıǵı 1,5 m ge shekem."],["Qızılqum arxarı","q"],["Qum efası","q"],["Shól agaması","q"]],n:10}]},
- {title:'Test',icon:'test',sub:'5 soraw · 3 juldız',quiz:true,tasks:["Okruglerde ósetuǵın ósimlikler bir-birinen nesi menen parıqlanadı?","Ámiwdárya deltasınıń haywanat túrlerine bay bolıwınıń sebebi nede?"],steps:[
+ {title:'Test',icon:'test',sub:'5 soraw',quiz:true,tasks:["Okruglerde ósetuǵın ósimlikler bir-birinen nesi menen parıqlanadı?","Ámiwdárya deltasınıń haywanat túrlerine bay bolıwınıń sebebi nede?"],steps:[
   {type:'choice',q:"Aymaqta ósimliklerdiń neshe túri ósedi?",o:["1000 ǵa jaqın","100 ge jaqın","10 000","500"],a:0,e:"1000 ǵa jaqın túr."},
   {type:'choice',q:"Galofitler qay jerde ósedi?",o:["Shorlı jerlerde","Taw shıńlarında","Suw astında","Qalada"],a:0,e:"Shorlıqlarda: sarısazan, qarabaraq, jıńǵıl."},
   {type:'choice',q:"Quslardıń neshe túri bar?",o:["319","71","43","33"],a:0,e:"319 túr."},
@@ -614,7 +684,7 @@ const TOPICS=[
   {type:'gallery',items:[['suwin','Buxara suwını','Tómengi Ámiwdárya biosfera rezervatında.'],['aqboken','Aqbóken','Sayǵaqlı kompleks qorıqxanasında.'],['flam2','Qızǵılt flamingo','Sudoche kóller sisteması.'],['ustirtjeyran','Jeyranlar','Qubla Ústirt milliy tábiyat baǵı.'],['sudochesys','Sudoche kóller sisteması','Ramsar konvenciyası dizimine 2023-jılı kirgizilgen.']]}]},
  {title:'Buxara suwını',icon:'calc',sub:'Tabıs tariyxı',steps:[
   {type:'calc',t:'Neshe ese kóbeydi?',q:"1976-jılı rezervatqa <b>21</b> Buxara suwını alıp kelingen. 2024-jılı olardıń sanı <b>1600</b> ge jaqın. Neshe ese kóbeygen? (pútin sanǵa shekem)",ans:76,tol:1,unit:'ese',hint:"1600 ÷ 21",e:"1600 ÷ 21 ≈ 76 ese. Qorǵaw jumısları nátiyje beredi!"}]},
- {title:'Test',icon:'test',sub:'5 soraw · 3 juldız',quiz:true,tasks:["Aymaq tábiyatınıń ózgeriwine Aral teńiziniń qurıwı qanday tásir tiygizbekte?","Qorıqlanatuǵın aymaqlardı jazıwsız kartaǵa belgileń."],steps:[
+ {title:'Test',icon:'test',sub:'5 soraw',quiz:true,tasks:["Aymaq tábiyatınıń ózgeriwine Aral teńiziniń qurıwı qanday tásir tiygizbekte?","Qorıqlanatuǵın aymaqlardı jazıwsız kartaǵa belgileń."],steps:[
   {type:'choice',q:"Ózbekstan Qızıl kitabı qashannan baslap júrgiziledi?",o:["1984","1961","2010","1991"],a:0,e:"1984-jıldan baslap."},
   {type:'choice',q:"Tómengi Ámiwdárya biosfera rezervatı qashan shólkemlestirilgen?",o:["1971","1991","2020","2021"],a:0,e:"1971-jılı Baday toǵay qorıqxanası retinde."},
   {type:'choice',q:"Sayǵaqlı kompleks qorıqxanasında qaysı haywan qorǵaladı?",o:["Aqbóken","Flamingo","Buxara suwını","Ondatra"],a:0,e:"Ústirt platosınıń aqbókeni."},
@@ -630,7 +700,7 @@ const TOPICS=[
  {title:'Topıraq hám haywanat',icon:'soil',sub:'Juplaw',steps:[
   {type:'match',q:"Topıraqtı onıń belgisi menen jupla",pairs:[["Avtomorflı topıraqlar","Jer astı suwınıń tásirisiz"],["Gidromorflı topıraqlar","Jer astı suwı jaqın"],["Kebirlikler","Jer astı suwı 0,5–1 m, duzlı"],["Mádeniy topıraqlar","Adam miyneti menen ózgergen"]]},
   {type:'match',q:"Qorǵalatuǵın aymaqtı haywanı menen jupla",pairs:[["Tómengi Ámiwdárya rezervatı","Xiywa qırǵawılı, Buxara suwını"],["Sayǵaqlı kompleks","Aqbóken"],["Sudoche-Aqpetkey","Flamingo, birqazan"],["Qubla Ústirt baǵı","Jeyran, Ústirt urialı"]]}]},
- {title:'I bap testi',icon:'test',sub:'8 soraw · 3 juldız',quiz:true,steps:[
+ {title:'I bap testi',icon:'test',sub:'8 soraw',quiz:true,steps:[
   {type:'choice',q:"Aymaqtıń eń biyik noqatı?",o:["Ashshıtaw, 478 m","Qarabawır, 292 m","Beltaw","Qızıljar"],a:0,e:"Sultan Wáyis tawınıń Ashshıtaw shıńı."},
   {type:'choice',q:"Klimat qanday?",o:["Keskin kontinentallı","Teńiz klimatı","Musson","Tropikalıq"],a:0,e:"Keskin kontinentallı hám qurǵaq."},
   {type:'choice',q:"Úlkemizdiń eń úlken suw deregi?",o:["Ámiwdárya","Sırdárya","Zarafshan","Aral teńizi"],a:0,e:"Ámiwdárya."},
@@ -656,7 +726,7 @@ const TOPICS=[
   {type:'info',k:'Geografiyalıq ornı',t:'Okrugtıń shegaraları',html:`<div class="facts"><div><b>Arqada</b><span>Aral teńizi hám onıń qurǵaǵan ultanı</span></div><div><b>Qublada</b><span>Úngizartı Qaraqumı</span></div><div><b>Batısta</b><span>Ústirt platosı</span></div><div><b>Shıǵısta</b><span>Qızılqum shóli</span></div></div><div class="fact">Delta Túyemoyın qısnaǵınan Aralǵa shekem <b>400 km</b> sozılǵan, eń keń jeri <b>140–150 km</b>.</div>`,img:'toranqil',cap:'Kanal boyındaǵı torańǵıllar'},
   {type:'info',k:'Klimatı',t:'Qısı suwıq, jazı ıssı',html:`<div class="facts"><div><b>−3…−4 °C</b><span>yanvar ortasha</span></div><div><b>+28…+29 °C</b><span>iyul ortasha</span></div><div><b>−32…−33 °C</b><span>eń tómen</span></div><div><b>+46…+47,3 °C</b><span>eń joqarı</span></div><div><b>90–110 mm</b><span>jıllıq jawın</span></div></div>`},
   {type:'gallery',items:[['jiltirbas','Jıltırbas kóli','Kollektorlar suwı quyılatuǵın kóllerdiń biri.'],['qarateran','Qaratereń kóli','Deltadaǵı kól.'],['jiyde','Jiyde','Toǵaylarda: aq tal, terek, jiyde, torańǵıl, jıńǵıl.'],['qarligash','Qarlıǵash','Toǵaylarda quslar kóp: qırǵawıl, aqquw, láylek, qarlıǵash.']]}]},
- {title:'Test',icon:'test',sub:'6 soraw · 3 juldız',quiz:true,tasks:["Tómengi Ámiwdárya okrugı jer beti dúzilisiniń basqa okruglerden ayırmashılıǵın túsindiriń.","Okrugta tarqalǵan paydalı qazılma kánlerin jazıwsız kartaǵa túsiriń."],steps:[
+ {title:'Test',icon:'test',sub:'6 soraw',quiz:true,tasks:["Tómengi Ámiwdárya okrugı jer beti dúzilisiniń basqa okruglerden ayırmashılıǵın túsindiriń.","Okrugta tarqalǵan paydalı qazılma kánlerin jazıwsız kartaǵa túsiriń."],steps:[
   {type:'choice',q:"Ózbekstan neshe tábiyiy geografiyalıq okrugqa bólinedi?",o:["11","4","7","17"],a:0,e:"11 okrug."},
   {type:'choice',q:"Úlkemiz neshe okrugtı iyeleydi?",o:["4","2","11","6"],a:0,e:"Ústirt, Aral, Tómengi Ámiwdárya, Qızılqum."},
   {type:'choice',q:"Ústirt hám Aral okrugları qaysı provinciyaǵa kiredi?",o:["Oraylıq Qazaqstan","Turan","Junǵariya-Tyanshan","Pamir"],a:0,e:"Oraylıq Qazaqstan provinciyası."},
@@ -679,7 +749,7 @@ const TOPICS=[
   {type:'info',k:'Paydalı qazılmalar',t:'Sultan Wáyis baylıqları',html:`<p>Tebinbulaq <b>temir</b> káni, fosforit, talk, granit, kvarc, mramor.</p><div class="facts"><div><b>830+</b><span>ósimlik túri</span></div><div><b>67</b><span>qus túri</span></div><div><b>33</b><span>sút emiziwshi</span></div></div>`},
   {type:'gallery',items:[['juzgin','Júzgin','Tiykarǵı shól ósimligi.'],['tasbaqa','Shól tasbaqası','Qızılqum jer bawırlawshılardıń mákanı.'],['lala','Lalaqızǵaldaq','Báhárgi efemer.']]},
   {type:'mapfind',map:'okrug',n:5,places:[["Beruniy",491,498],["Tórtkúl",510,522],["Taxtakópir",464,333],["Shuqırqaq",529,392],["Qaranıń taqırı",600,310],["Mańǵıt",421,437]],host:"Qızılqumǵa jaqın elatlı punktlerdi tap."}]},
- {title:'Test',icon:'test',sub:'5 soraw · 3 juldız',quiz:true,tasks:["Qızılqum qanday tábiyiy baylıqlarǵa bay ekenligin dápterińizge jazıń."],steps:[
+ {title:'Test',icon:'test',sub:'5 soraw',quiz:true,tasks:["Qızılqum qanday tábiyiy baylıqlarǵa bay ekenligin dápterińizge jazıń."],steps:[
   {type:'choice',q:"Qızılqum okrugınıń maydanı?",o:["3,2 mln ga dan aslam","70 mıń km²","68,9 mıń km²","1040 km²"],a:0,e:"3,2 mln gektardan aslam."},
   {type:'choice',q:"Tebinbulaq qanday kán?",o:["Temir","Gaz","Duz","Neft"],a:0,e:"Temir káni."},
   {type:'choice',q:"Jazda qumlar qansha qızadı?",o:["70–75 °C","40 °C","100 °C","30 °C"],a:0,e:"70–75 °C qa shekem."},
@@ -700,7 +770,7 @@ const TOPICS=[
   {type:'calc',t:'Ústirttiń amplitudası',q:"Ústirtte eń joqarı <b>+47 °C</b>, eń tómen <b>−35,7 °C</b>. Amplitudanı tap.",ans:82.7,tol:.1,unit:'°C',hint:"47 − (−35,7)",e:"47 + 35,7 = 82,7 °C."},
   {type:'bars',k:'Jawın-shashın',t:'Máwsimler boyınsha, %',data:[["Báhár",34,'var(--ok)'],["Gúz",26,'var(--gold)'],["Jaz",23,'var(--no)'],["Qıs",17,'var(--pri)']],unit:'%',note:"Ústirtte jılına 68–160 mm jawın jawadı. Jer astı suwları 20–50 m tereńde, kóbinese shor."},
   {type:'gallery',items:[['jeyran','Jeyran','Qızıl kitapqa kirgen.'],['aqboken','Aqbóken','Ústirtte keń tarqalǵan.'],['qaraqulaq','Qaraqulaq','Qızıl kitapqa kirgen.'],['gewirek','Gewirek','Ústirttiń ósimligi.']],host:"Ústirtte sút emiziwshilerdiń 36, quslardıń 51 túri bar."}]},
- {title:'Test',icon:'test',sub:'5 soraw · 3 juldız',quiz:true,tasks:["Ústirttegi dáslepki gaz káni neshinshi jılı birinshi ónimin bergen?","Ústirt platosınıń eń ıssı hám eń suwıq temperaturaları ortasındaǵı amplitudanı tabıń."],steps:[
+ {title:'Test',icon:'test',sub:'5 soraw',quiz:true,tasks:["Ústirttegi dáslepki gaz káni neshinshi jılı birinshi ónimin bergen?","Ústirt platosınıń eń ıssı hám eń suwıq temperaturaları ortasındaǵı amplitudanı tabıń."],steps:[
   {type:'choice',q:"Ústirttiń maydanı?",o:["70 mıń km²","3,2 mln ga","1040 km²","11 mıń km²"],a:0,e:"70 mıń km²."},
   {type:'choice',q:"Ústirttiń eń biyik noqatı?",o:["Qarabawır, 292 m","Ashshıtaw, 478 m","Beltaw, 145 m","Kassarma, 500 m"],a:0,e:"Qarabawır qırı, 292 m."},
   {type:'choice',q:"Shaqpaqtı qashan birinshi ónimin berdi?",o:["1971","1962","1991","2020"],a:0,e:"1971-jılı."},
@@ -722,7 +792,7 @@ const TOPICS=[
   {type:'info',k:'Klimat hám duz',t:'Qurǵaǵan ultan',img:[['araldry','Araldıń qurǵaǵan ultanı'],['cherkez','Rixter cherkezi']],html:`<div class="facts"><div><b>11,9 °C</b><span>Moynaqtıń ortasha jıllıq temperaturası</span></div><div><b>107–114 mlrd t</b><span>qurǵaǵan ultandaǵı duz</span></div><div><b>80 mln t</b><span>jılına samal alıp ketetuǵın záhárli duz</span></div><div><b>80–90 %</b><span>topıraqlardıń kúshli shorlanǵan bólegi</span></div></div>`},
   {type:'calc',t:'Seksewil hám kislorod',q:"1 gektar 4 jıllıq seksewil <b>835,4 kg</b> kislorod shıǵaradı. <b>10 gektar</b> qansha kislorod shıǵaradı?",ans:8354,tol:1,unit:'kg',hint:"835,4 × 10",e:"835,4 × 10 = 8354 kg."},
   {type:'gallery',items:[['qumtishqan','Qumtıshqan','Aral okrugında kemiriwshiler jasaydı.'],['aral3','Aral teńizi','Búgingi Batıs Aral.'],['ustirtrock','Aral teńiziniń Ústirt platosınan kórinisi','Batıs jaǵası tik chink.']]}]},
- {title:'Test',icon:'test',sub:'5 soraw · 3 juldız',quiz:true,tasks:["Aral krizisiniń adamlar densawlıǵına keri tásirlerin dápterińizge jazıń."],steps:[
+ {title:'Test',icon:'test',sub:'5 soraw',quiz:true,tasks:["Aral krizisiniń adamlar densawlıǵına keri tásirlerin dápterińizge jazıń."],steps:[
   {type:'choice',q:"Moynaqtıń ortasha jıllıq temperaturası?",o:["11,9 °C","25 °C","−5,5 °C","0 °C"],a:0,e:"11,9 °C."},
   {type:'choice',q:"Araldıń qurǵaǵan ultanındaǵı gaz kánleri?",o:["Súrgil, Úshsay","Tebinbulaq","Barsakelmes","Xojakól"],a:0,e:"Súrgil, Úshsay, Shaǵırlı, Shege."},
   {type:'choice',q:"Samal jılına qansha záhárli duz alıp ketedi?",o:["80 mln t","8 t","800 mlrd t","80 t"],a:0,e:"Jılına 80 mln tonna."},
@@ -754,7 +824,7 @@ const TOPICS=[
  {title:'Qızıl kitap',icon:'shield',sub:'Galereya',steps:[
   {type:'gallery',items:[['jeyran','Jeyran','Qubla Ústirt milliy tábiyat baǵında qorǵaladı.'],['flam2','Qızǵılt flamingo','Sudoche-Aqpetkey qorıqxanasında.'],['aqboken','Aqbóken','Sayǵaqlı kompleks qorıqxanasında.'],['birqazan','Birqazan','Sudoche kólinde.'],['tasbaqa','Orta Aziya shól tasbaqası','Qızıl kitapqa kirgen jer bawırlawshı.']],host:"Bul haywanlardıń hámmesi Qızıl kitapqa kirgizilgen. Olardı qorǵawımız kerek!"},
   {type:'write',q:"Qızıl kitapqa kirgen bir haywandı tańlap, onı qorǵaw boyınsha 3 usınıs jaz."}]},
- {title:'Úlken juwmaqlawshı test',icon:'test',sub:'10 soraw · 3 juldız',quiz:true,tasks:["Úlkemizdiń tábiyatı boyınsha joba tiykarında qısqasha tábiyiy geografiyalıq sıpatlama jazıń."],steps:[
+ {title:'Úlken juwmaqlawshı test',icon:'test',sub:'10 soraw',quiz:true,tasks:["Úlkemizdiń tábiyatı boyınsha joba tiykarında qısqasha tábiyiy geografiyalıq sıpatlama jazıń."],steps:[
   {type:'choice',q:"Qaraqalpaqstannıń arqa shetki noqatı?",o:["45°35′ a.k.","40°55′ a.k.","56°00′ sh.b.","62°24′ sh.b."],a:0,e:"Ústirt platosınıń arqa-shıǵısında."},
   {type:'choice',q:"Beruniy nızamı neni túsindiredi?",o:["Jatqızıq úlkenligi hám aǵıs tezligi","Quyash múyeshi","Topıraq túrleri","Haywanlardıń tarqalıwı"],a:0,e:"Jatqızıqtıń úlkenligi aǵıs tezligine tuwrı proporcional."},
   {type:'choice',q:"Eń biyik noqat?",o:["Ashshıtaw, 478 m","Qarabawır, 292 m","Jumırtaw","Beltaw"],a:0,e:"Ashshıtaw."},
@@ -913,7 +983,7 @@ function say(text,mood){const b=document.querySelector('[data-bub]');if(!b||!tex
  const shapes=['open','mid','smile','open','mid','grin'];mouthT=setInterval(()=>setMouth(pick(shapes)),95);
  b.textContent='';typeT=setInterval(()=>{i+=2;b.textContent=plain.slice(0,i);if(i>=plain.length){clearInterval(typeT);b.innerHTML=text;finish();}},24);}
 
-const PRAISE=["Durıs! Bárekella!","Júdá jaqsı!","Ájayıp, dawam et!","Tap ózi!","Sen haqıyqıy geografseń!"],OOPS=["Qáte, biraq qorqpa – túsindirmeni oqı.","Hesh nárse etpeydi, endi bilip aldıń!","Bul júdá qıyın edi. Eslep qal!"];
+const PRAISE=["Durıs.","Durıs juwap.","Jaqsı.","Tuwrı, dawam et."],OOPS=["Qáte. Túsindirmeni oqıp shıq.","Qáte. Durıs juwaptı eslep qal.","Bul sorawdı qaytalap al."];
 
 /* ================= 3D engine ================= */
 const HAS3D=(()=>{try{return !!window.THREE&&!!THREE.OrbitControls&&!!document.createElement('canvas').getContext('webgl')}catch(e){return false}})();
@@ -1199,58 +1269,83 @@ const T={
   card.querySelector('[data-p]').onclick=()=>{i=(i+s.items.length-1)%s.items.length;show()};card.querySelector('[data-x]').onclick=()=>{i=(i+1)%s.items.length;show()};show();},
  write(m,c,s){const key=c.key+'.'+c.si;const card=el(`<div class="card"><span class="kicker">Óz pikirińdi jaz</span><h2 class="h">${s.q}</h2><textarea rows="6" placeholder="Usı jerge jazıń..."></textarea><p class="cap">Jazǵanıń tek usı qurılmada saqlanadı.</p></div>`);m.append(card);
   const ta=card.querySelector('textarea');ta.value=P.notes[key]||'';ta.oninput=()=>{P.notes[key]=ta.value;save();if(ta.value.trim().length>=10)c.ok();};if(ta.value.trim().length>=10)c.ok();},
- result(m,c,s){const ok=c.quizScore,n=c.quizN,st=ok>=n*.9?3:ok>=n*.7?2:ok>=n*.5?1:0;c.stars=st;
-  m.append(el(`<div class="card" style="text-align:center;justify-items:center"><span class="kicker">Nátiyje</span><div class="big num">${ok} / ${n}</div><div class="stars" style="gap:8px">${[0,1,2].map(j=>j<st?STAR:STAR_OFF).join('').replace(/<svg/g,'<svg style="width:44px;height:44px"')}</div></div>`));
-  if(s.tasks)m.append(el(`<div class="card"><span class="kicker">Dápterińe orınla</span><ol class="tasks">${s.tasks.map(t=>`<li>${t}</li>`).join('')}</ol></div>`));
-  say(st===3?"Sen haqıyqıy geograf ekenseń! Bárekella!":st===2?"Jaqsı nátiyje! Qáte sorawlardı qaytalap al.":"Qorqpa! Missiyalardı qaytadan ótip, testti jáne tapsır.",st>=2?'happy':'sad');c.ok();}
+ result(m,c,s){const ok=c.quizScore,n=c.quizN,p=Math.round(ok/n*100);
+  m.append(el(`<div class="card" style="text-align:center;justify-items:center"><span class="kicker">Test nátiyjesi</span><div class="big num">${ok} / ${n}</div><div class="stats" style="width:min(360px,100%)"><div><b class="num">${p}%</b><span>durıs</span></div><div><b class="num">${grade(p)}</b><span>bahası</span></div></div></div>`));
+  if(s.tasks)m.append(el(`<div class="card"><span class="kicker">Soraw hám tapsırmalar · dápterge</span><ol class="tasks">${s.tasks.map(t=>`<li>${t}</li>`).join('')}</ol></div>`));
+  say(p>=86?"Ájayıp nátiyje.":p>=71?"Jaqsı nátiyje. Qáte sorawlardı qaytalap al.":"Temanı qaytalap, testti jáne tapsır.",p>=71?'happy':'sad');c.ok();}
 };
 
-/* ================= app shell ================= */
+/* ================= app shell (8-klass) ================= */
 const app=document.getElementById('app');
+P.sc=P.sc||{};P.cls=P.cls||[];
 const mKey=(t,mi)=>`t${t.n}.m${mi}`;
-const missionStars=(t,mi)=>P.stars[mKey(t,mi)]||0;
-const missionMax=m=>m.quiz?3:1;
-const topicStars=t=>t.missions.reduce((a,_,i)=>a+missionStars(t,i),0);
-const topicMax=t=>t.missions.reduce((a,m)=>a+missionMax(m),0);
+const mScore=(t,mi)=>P.sc[mKey(t,mi)];
 const topicDone=t=>t.missions.filter((_,i)=>P.done[mKey(t,i)]).length;
-const allStars=()=>TOPICS.reduce((a,t)=>a+topicStars(t),0),allMax=()=>TOPICS.reduce((a,t)=>a+topicMax(t),0);
+const topicPct=t=>{const d=t.missions.map((_,i)=>i).filter(i=>P.done[mKey(t,i)]);if(!d.length)return null;return Math.round(d.reduce((a,i)=>a+(mScore(t,i)||0),0)/d.length*100)};
+const totalMissions=()=>TOPICS.reduce((a,t)=>a+t.missions.length,0),totalDone=()=>TOPICS.reduce((a,t)=>a+topicDone(t),0);
+const avgPct=()=>{const v=TOPICS.map(topicPct).filter(x=>x!=null);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):null};
+const grade=p=>p==null?'–':p>=86?5:p>=71?4:p>=56?3:2;
 let cleanups=[];
-function cleanupAll(){cleanups.forEach(f=>{try{f()}catch(e){}});cleanups=[];clearInterval(typeT);}
+function cleanupAll(){cleanups.forEach(f=>{try{f()}catch(e){}});cleanups=[];clearInterval(typeT);clearInterval(mouthT);}
 const nextTopic=()=>TOPICS.find(t=>topicDone(t)<t.missions.length);
+const pctChip=p=>p==null?'<span class="pchip">Baslanbaǵan</span>':`<span class="pchip ${p>=86?'g5':p>=71?'g4':p>=56?'g3':'g2'}">${p}%</span>`;
+
+/* ---- result code (no server: the student copies a code and sends it to the teacher) ---- */
+const b64e=s=>btoa(unescape(encodeURIComponent(s))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+const b64d=s=>decodeURIComponent(escape(atob(s.replace(/-/g,'+').replace(/_/g,'/'))));
+const chk=s=>{let h=7;for(const ch of s)h=(h*31+ch.charCodeAt(0))%1679616;return h.toString(36)};
+function makeCode(){const pr=P.profile||{};const r=TOPICS.map(t=>{const p=topicPct(t);return p==null?'':`${t.n}:${p}:${topicDone(t)}`}).filter(Boolean).join(',');
+ const body=['1',pr.name||'',pr.cls||'',r,Math.floor(Date.now()/60000)].join('|');return 'QG8-'+b64e(body+'|'+chk(body));}
+function readCode(code){try{const s=b64d(code.slice(4)),parts=s.split('|');const c=parts.pop(),body=parts.join('|');if(chk(body)!==c)return null;
+ const [v,name,cls,r,ts]=parts;const res={};(r?r.split(','):[]).forEach(x=>{const [n,p,d]=x.split(':');res[n]={p:+p,d:+d}});return {name,cls,res,ts:+ts};}catch(e){return null}}
+
+function profileCard(onDone){const pr=P.profile||{};
+ const c=el(`<form class="card prof"><span class="kicker">Oqıwshı</span><h2 class="h" style="font-size:1.1rem">Atıń hám klasıń</h2>
+  <p class="sub">Nátiyjeleriń muǵallimge usı at penen barıp jetedi.</p>
+  <div class="frm"><label>Atı, familiyası<input id="pf-name" required maxlength="40" value="${(pr.name||'').replace(/"/g,'&quot;')}" placeholder="Mısalı: Aruzhan Qalliev"></label>
+  <label>Klası<input id="pf-cls" required maxlength="8" value="${(pr.cls||'').replace(/"/g,'&quot;')}" placeholder="8-A"></label></div>
+  <div class="row" style="justify-content:flex-start"><button class="btn" type="submit">Saqlaw</button>${pr.name?'':'<button class="btn ghost" type="button" data-later>Keyin</button>'}</div></form>`);
+ c.onsubmit=e=>{e.preventDefault();P.profile={name:c.querySelector('#pf-name').value.trim(),cls:c.querySelector('#pf-cls').value.trim().toUpperCase()};save();onDone&&onDone();};
+ const l=c.querySelector('[data-later]');if(l)l.onclick=()=>{P.profileLater=true;save();onDone&&onDone();};return c;}
 
 function home(){
- cleanupAll();app.innerHTML='';const nt=nextTopic(),started=Object.keys(P.done).length>0;
- const msg=!started?"Sálem! Men <b>Dáwlet</b>, Nókisten. Bul jerde Qaraqalpaqstan geografiyasınıń barlıq 17 teması bar. Birinshi temadan basla!":
-  nt?`Qaytıp kelgeniń jaqsı! Keyingi tema: <b>${nt.n}. ${nt.title}</b>.`:"Barlıq temalar tamam! Sen Qaraqalpaqstan tábiyatın tolıq úyrendiń!";
- const head=el(`<div class="homehead gut"><div class="brand">Qaraqalpaqstan geografiyası<small>8-klass · elektron sabaqlıq</small></div><div class="stars num">${STAR}<span>${allStars()}</span></div></div>`);
+ cleanupAll();app.innerHTML='';const nt=nextTopic(),started=Object.keys(P.done).length>0,pr=P.profile;
+ const msg=!started?`Sálem${pr?', <b>'+pr.name.split(' ')[0]+'</b>':''}! Men Dáwlet. Bul elektron sabaqlıqta Qaraqalpaqstan geografiyasınıń 17 teması bar. Birinshi temadan baslayıq.`:
+  nt?`Keyingi tema: <b>${nt.n}. ${nt.title}</b>.`:"Barlıq temalar tamamlandı. Nátiyjeńdi muǵallimge jiberiwdi umıtpa.";
+ const avg=avgPct();
+ const head=el(`<div class="homehead gut"><div class="brand">Qaraqalpaqstan geografiyası<small>8-klass · elektron sabaqlıq</small></div>${pr?`<button type="button" class="who" data-prof><b>${pr.name}</b><span>${pr.cls}</span></button>`:''}</div>`);
+ const hp=head.querySelector('[data-prof]');if(hp)hp.onclick=()=>sheet(profileCard(()=>{closeSheet();home()}));
  const scr=el(`<div class="screen gut" style="padding-block:0 24px"></div>`);
+ if(!pr&&!P.profileLater)scr.append(profileCard(home));
  scr.append(el(`<div class="hero"><div class="av" data-av>${DW}</div><div class="bub" data-bub></div></div>`));
- if(nt){const go=el(`<button type="button" class="topic tbtn"><span class="t1">${started?'Dawam etiw':'Baslaw'} · ${nt.ch} bap</span><span class="t2">${nt.n}. ${nt.title}</span><span class="t3">${topicDone(nt)} / ${nt.missions.length} missiya tamam</span></button>`);go.onclick=()=>topic(nt);scr.append(go);}
+ scr.append(el(`<div class="stats"><div><b class="num">${totalDone()} / ${totalMissions()}</b><span>bólim tamamlandı</span></div><div><b class="num">${avg==null?'–':avg+'%'}</b><span>ortasha nátiyje</span></div><div><b class="num">${grade(avg)}</b><span>bahası</span></div></div>`));
+ if(nt){const go=el(`<button type="button" class="topic tbtn"><span class="t1">${started?'Dawam etiw':'Baslaw'} · ${nt.ch} bap · ${nt.n}-tema</span><span class="t2">${nt.title}</span><span class="t3">${topicDone(nt)} / ${nt.missions.length} bólim tamamlandı</span></button>`);go.onclick=()=>topic(nt);scr.append(go);}
+ if(started){const sb=el('<button type="button" class="btn ghost block">Nátiyjeni muǵallimge jiberiw</button>');sb.onclick=sendResults;scr.append(sb);}
  [['I','Aymaqtıń tábiyatı hám ózine tán ózgeshelikleri'],['II','Tábiyiy geografiyalıq rayonlastırıw']].forEach(([ch,name])=>{
-  scr.append(el(`<div class="chhead"><span class="kicker">${ch} bap</span><h2 class="h" style="font-size:1.15rem">${name}</h2></div>`));
-  const grid=el('<div class="tgrid"></div>');
-  TOPICS.filter(t=>t.ch===ch).forEach(t=>{const d=topicDone(t),n=t.missions.length,pct=d/n;
-   const b=el(`<button type="button" class="tcard ${d===n?'done':''}"><span class="ring" style="--p:${pct*100}"><span>${ICONS[t.icon]||t.n}</span></span><span class="tl"><span class="tn">${t.n}-tema${t.prac?' · ámeliy':''}</span><b>${t.title}</b><span class="ts num">${STAR}${topicStars(t)} / ${topicMax(t)}</span></span></button>`);
-   b.onclick=()=>topic(t);grid.append(b);});scr.append(grid);});
- const tl=el('<button type="button" class="linkbtn">Muǵallim ushın eskertpe</button>');tl.onclick=teacher;scr.append(tl);
+  scr.append(el(`<div class="chhead"><span class="kicker">${ch} bap</span><h2 class="h" style="font-size:1.1rem">${name}</h2></div>`));
+  const list=el('<div class="tlist"></div>');
+  TOPICS.filter(t=>t.ch===ch).forEach(t=>{const d=topicDone(t),n=t.missions.length,p=topicPct(t);
+   const b=el(`<button type="button" class="trow ${d===n?'done':''}"><span class="tnum num">${t.n}</span><span class="tl"><b>${t.title}</b><span class="tmeta">${t.prac?'Ámeliy shınıǵıw · ':''}${t.pages}-bet · ${d}/${n} bólim</span><span class="tbar"><i style="width:${d/n*100}%"></i></span></span>${pctChip(p)}</button>`);
+   b.onclick=()=>topic(t);list.append(b);});scr.append(list);});
+ const tl=el('<button type="button" class="linkbtn">Muǵallim paneli</button>');tl.onclick=teacher;scr.append(tl);
  app.append(head,scr);setTimeout(()=>say(msg,!started?'wave':null),250);
 }
 
 function topic(t){
  cleanupAll();app.innerHTML='';
- const nx=t.missions.findIndex((_,i)=>!P.done[mKey(t,i)]);
- const top=el(`<div class="top gut"><button type="button" class="iconbtn" aria-label="Bas betke">${BACK}</button><div style="flex:1;min-width:0"><div class="kicker">${t.ch} bap · ${t.n}-tema · sabaqlıq ${t.pages}-bet</div><b style="display:block;line-height:1.2">${t.title}</b></div><div class="stars num">${STAR}<span>${topicStars(t)}</span></div></div>`);
+ const nx=t.missions.findIndex((_,i)=>!P.done[mKey(t,i)]),p=topicPct(t);
+ const top=el(`<div class="top gut"><button type="button" class="iconbtn" aria-label="Bas betke">${BACK}</button><div style="flex:1;min-width:0"><div class="kicker">${t.ch} bap · ${t.n}-tema · sabaqlıq ${t.pages}-bet</div><b style="display:block;line-height:1.25">${t.title}</b></div>${pctChip(p)}</div>`);
  top.querySelector('button').onclick=home;
  const scr=el(`<div class="screen gut" style="padding-block:0 24px"></div>`);
  scr.append(el(`<div class="hero"><div class="av" data-av>${DW}</div><div class="bub" data-bub></div></div>`));
- const path=el('<div class="path"></div>');
- t.missions.forEach((m,i)=>{const done=!!P.done[mKey(t,i)],isNext=i===nx;
-  const b=el(`<button type="button" class="node ${done?'done':''} ${isNext?'next':''}"><span class="nc">${ICONS[m.icon]||'?'}${done?`<span class="badge">${CHECK}</span>`:''}</span><span class="nl"><b>${i+1}. ${m.title}</b><span>${m.sub||''}${m.quiz&&done?` · ${missionStars(t,i)} juldız`:''}</span></span></button>`);
-  b.onclick=()=>openMission(t,i);path.append(b);});
- scr.append(path);
- const go=el(`<button type="button" class="btn gold block">${nx<0?'Testti qaytalaw':nx===0?'Baslaw':'Dawam etiw'}</button>`);go.onclick=()=>openMission(t,nx<0?t.missions.length-1:nx);scr.append(go);
+ const list=el('<ol class="mlist"></ol>');
+ t.missions.forEach((m,i)=>{const done=!!P.done[mKey(t,i)],isNext=i===nx,sc=mScore(t,i);
+  const li=el(`<li><button type="button" class="mrow ${done?'done':''} ${isNext?'next':''}"><span class="mi-ic">${done?CHECK:ICONS[m.icon]||''}</span><span class="tl"><b>${m.title}</b><span class="tmeta">${m.quiz?'Test · ':''}${m.sub||''}</span></span>${done?pctChip(Math.round((sc||0)*100)):isNext?'<span class="pchip next">Keyingi</span>':''}</button></li>`);
+  li.querySelector('button').onclick=()=>openMission(t,i);list.append(li);});
+ scr.append(list);
+ const go=el(`<button type="button" class="btn block">${nx<0?'Testti qaytadan tapsırıw':nx===0?'Temanı baslaw':'Dawam etiw'}</button>`);go.onclick=()=>openMission(t,nx<0?t.missions.length-1:nx);scr.append(go);
  app.append(top,scr);
- setTimeout(()=>say(nx<0?"Bul tema tamam! Qálegen missiyanı qaytalay alasań.":nx===0?t.intro:`Dawam etemiz! Keyingi missiya: <b>${t.missions[nx].title}</b>.`,nx===0?'wave':null),250);
+ setTimeout(()=>say(nx<0?`Tema tamamlandı. Nátiyjeń: <b>${p}%</b>. Qálegen bólimdi qaytalay alasań.`:nx===0?t.intro:`Keyingi bólim: <b>${t.missions[nx].title}</b>.`,nx===0?'wave':null),250);
 }
 
 function openMission(t,mi){
@@ -1259,7 +1354,7 @@ function openMission(t,mi){
  let si=0,quizScore=0,quizN=steps.filter(s=>s.type==='choice').length,scores=[];
  const run=()=>{
   cleanupAll();app.innerHTML='';const st=steps[si];
-  const top=el(`<div class="top gut"><button type="button" class="iconbtn" aria-label="Missiyalarǵa qaytıw">${X_ICON}</button><div class="pbar"><i style="width:${si/steps.length*100}%"></i></div><div class="stars num">${STAR}<span>${allStars()}</span></div></div>`);
+  const top=el(`<div class="top gut"><button type="button" class="iconbtn" aria-label="Temaǵa qaytıw">${X_ICON}</button><div class="pbar"><i style="width:${si/steps.length*100}%"></i></div><span class="stepn num">${si+1}/${steps.length}</span></div>`);
   top.querySelector('button').onclick=()=>topic(t);
   const scr=el(`<div class="screen gut"></div>`);
   const host=el(`<div class="host gut"><div class="av" data-av>${DW}</div><div class="bub" data-bub></div></div>`);
@@ -1274,45 +1369,129 @@ function openMission(t,mi){
   if(c.full)scr.classList.add('full');
   if(c.check)btn.textContent='Tekseriw';
   const skipB=foot.querySelector('[data-skip]');if(st.type==='result')skipB.hidden=true;
-  const advance=()=>{si++;if(si<steps.length)run();else finish(t,mi);};
+  const advance=()=>{si++;if(si<steps.length)run();else finish(t,mi,scores);};
   skipB.onclick=()=>{if(c.check&&phase==='answer')scores.push(0);advance();};
   btn.onclick=()=>{
    if(c.check&&phase==='answer'){skipB.hidden=true;const r=c.onCheck();c.locked=true;phase='done';if(r.ok)quizScore++;scores.push(r.ok?1:0);
-    foot.classList.add(r.ok?'ok':'no');fbt.hidden=false;fbt.innerHTML=`${r.ok?pick(PRAISE):'Qáte.'}<span>${r.text}</span>`;
+    foot.classList.add(r.ok?'ok':'no');fbt.hidden=false;fbt.innerHTML=`${r.ok?'Durıs.':'Qáte.'}<span>${r.text}</span>`;
     btn.className='btn block '+(r.ok?'ok':'no');btn.textContent='Dawam etiw';say(r.ok?pick(PRAISE):pick(OOPS),r.ok?'happy':'sad');return;}
    if(c.intercept&&c.intercept())return;
-   if(st.type==='result')P.stars[mKey(t,mi)]=Math.max(P.stars[mKey(t,mi)]||0,c.stars);
    advance();};
   requestAnimationFrame(()=>requestAnimationFrame(()=>scr.querySelectorAll('.tr i').forEach(i=>i.style.width=i.style.getPropertyValue('--w'))));
-  const hostTxt=st.host||(c.check?pick(['Durıs juwaptı tańla.','Oylap kór hám tańla!','Sen bul sorawdı bileseń!']):st.type==='result'?'':pick(['Dıqqat penen oqı!','Qızıq pa? Dawam et!','Bul júdá áhmiyetli maǵlıwmat.','Eslep qal, testte kerek boladı!']));
+  const hostTxt=st.host||(c.check?pick(['Durıs juwaptı tańla.','Oylap kórip tańla.','Sorawdı dıqqat penen oqı.']):st.type==='result'?'':pick(['Dıqqat penen oqı.','Bul maǵlıwmat testte kerek boladı.','Áhmiyetli sanlardı dápterge jazıp al.']));
   if(hostTxt)setTimeout(()=>{const b=document.querySelector('[data-bub]');if(b&&!b.textContent)say(hostTxt)},120);
  };
  run();
 }
 
-function finish(t,mi){
+function finish(t,mi,scores){
  cleanupAll();const mm=t.missions[mi],k=mKey(t,mi);
- if(!mm.quiz)P.stars[k]=1;P.done[k]=true;save();
- const st=P.stars[k]||0,max=missionMax(mm),nx=t.missions.findIndex((_,i)=>!P.done[mKey(t,i)]);
+ const sc=scores.length?scores.reduce((a,b)=>a+b,0)/scores.length:1;
+ P.sc[k]=Math.max(P.sc[k]||0,sc);P.done[k]=true;save();
+ const nx=t.missions.findIndex((_,i)=>!P.done[mKey(t,i)]),pct=Math.round(sc*100),tp=topicPct(t);
  app.innerHTML='';
- const r=el(`<div class="reward gut"><div class="av" data-av>${DW}</div><h2 class="h">${nx<0?'Tema tamam!':'Missiya tamam!'}</h2><p class="sub">${t.n}-tema · ${mm.title}</p>
-  <div class="rs" style="color:var(--gold)">${Array.from({length:max},(_,j)=>j<st?STAR:STAR_OFF).join('')}</div>
-  <p class="bub" data-bub style="max-width:34ch"></p><div class="row"><button type="button" class="btn ghost" data-b>Tema kartası</button>${nx>=0?'<button type="button" class="btn gold" data-n>Keyingi missiya</button>':(TOPICS[TOPICS.indexOf(t)+1]?'<button type="button" class="btn gold" data-t>Keyingi tema</button>':'')}</div></div>`);
+ const r=el(`<div class="reward gut"><div class="av" data-av>${DW}</div><span class="kicker">${t.n}-tema · ${mm.title}</span><h2 class="h">${nx<0?'Tema tamamlandı':'Bólim tamamlandı'}</h2>
+  <div class="stats" style="width:min(420px,100%)"><div><b class="num">${pct}%</b><span>bul bólim</span></div><div><b class="num">${tp}%</b><span>tema boyınsha</span></div><div><b class="num">${grade(tp)}</b><span>bahası</span></div></div>
+  <p class="bub" data-bub style="max-width:36ch"></p><div class="row"><button type="button" class="btn ghost" data-b>Temaǵa qaytıw</button>${nx>=0?'<button type="button" class="btn" data-n>Keyingi bólim</button>':(TOPICS[TOPICS.indexOf(t)+1]?'<button type="button" class="btn" data-t>Keyingi tema</button>':'')}</div></div>`);
  r.querySelector('[data-b]').onclick=()=>topic(t);
  const bn=r.querySelector('[data-n]');if(bn)bn.onclick=()=>openMission(t,nx);
  const bt=r.querySelector('[data-t]');if(bt)bt.onclick=()=>topic(TOPICS[TOPICS.indexOf(t)+1]);
  app.append(r);
- say(nx>=0?`Bárekella! Keyingi missiya: <b>${t.missions[nx].title}</b>.`:`${t.n}-tema tamam! Sen ${topicStars(t)} juldız jıynadıń.`,'happy');
+ say(nx>=0?`Jaqsı. Keyingi bólim: <b>${t.missions[nx].title}</b>.`:`${t.n}-tema tamamlandı. Nátiyjeń – ${tp}%.`,pct>=70?'happy':null);
 }
 
-function teacher(){
- const s=el(`<div class="sheet"><div class="pane gut"><h2 class="h" style="font-size:1.15rem">O‘qituvchi uchun</h2>
- <p class="sub">Ilova darslikning 17 mavzusini qamrab oladi. Har mavzuda kartalar, interaktiv mashqlar va test bor. Natijalar faqat shu qurilma brauzerida saqlanadi.</p>
- <h3 style="margin:6px 0 0;font-size:1rem">Darslikda tekshirilishi kerak bo‘lgan raqamlar</h3><ul>${DATA.errata.map(e=>`<li>${e}</li>`).join('')}</ul>
- <div class="row"><button type="button" class="btn ghost sm" data-reset>Natijalarni o‘chirish</button><button type="button" class="btn sm" data-close>Yopish</button></div></div></div>`);
- s.onclick=e=>{if(e.target===s)s.remove()};s.querySelector('[data-close]').onclick=()=>s.remove();
- let armed=false;s.querySelector('[data-reset]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Ishonchingiz komilmi? Yana bosing';return;}P={done:{},stars:{},notes:{}};save();s.remove();home();};
- app.append(s);
+/* ---- sheets ---- */
+function sheet(content){closeSheet();const s=el(`<div class="sheet"><div class="pane gut"></div></div>`);s.querySelector('.pane').append(content);s.onclick=e=>{if(e.target===s)closeSheet()};app.append(s);return s;}
+function closeSheet(){document.querySelectorAll('.sheet').forEach(s=>s.remove());}
+function sendResults(){
+ if(!P.profile){sheet(profileCard(()=>{closeSheet();sendResults()}));return;}
+ const code=makeCode();
+ const box=el(`<div style="display:grid;gap:12px"><span class="kicker">Nátiyjeni jiberiw</span><h2 class="h" style="font-size:1.15rem">${P.profile.name} · ${P.profile.cls}</h2>
+  <div class="tbl"><table><thead><tr><th>Tema</th><th class="r">Bólim</th><th class="r">Nátiyje</th></tr></thead><tbody class="num">${TOPICS.filter(t=>topicDone(t)).map(t=>`<tr><td>${t.n}. ${t.title}</td><td class="r">${topicDone(t)}/${t.missions.length}</td><td class="r">${topicPct(t)}%</td></tr>`).join('')}</tbody></table></div>
+  <p class="sub">Tómendegi kodtı kóshirip, muǵallimińe Telegram yamasa basqa jol menen jiber.</p>
+  <textarea class="code" readonly rows="3">${code}</textarea>
+  <div class="row" style="justify-content:flex-start"><button type="button" class="btn" data-copy>Kodtı kóshiriw</button><button type="button" class="btn ghost" data-close>Jabıw</button></div><p class="cap" data-st aria-live="polite"></p></div>`);
+ const ta=box.querySelector('textarea');
+ box.querySelector('[data-copy]').onclick=()=>{const st=box.querySelector('[data-st]');const fb=()=>{ta.focus();ta.select();st.textContent='Kod belgilendi – Ctrl+C (telefonda «Kóshiriw») menen kóshiriń.'};
+  try{navigator.clipboard.writeText(code).then(()=>st.textContent='Kod kóshirildi.',fb)}catch(e){fb()}};
+ box.querySelector('[data-close]').onclick=closeSheet;sheet(box);
+}
+
+/* ---- teacher panel (Uzbek) ---- */
+function teacher(tab='res'){
+ cleanupAll();app.innerHTML='';
+ const top=el(`<div class="top gut"><button type="button" class="iconbtn" aria-label="Bosh sahifa">${BACK}</button><div style="flex:1;min-width:0"><div class="kicker">O‘qituvchi uchun</div><b style="display:block">O‘qituvchi paneli</b></div></div>`);
+ top.querySelector('button').onclick=home;
+ const tabs=el(`<div class="tabs gut" role="tablist">${[['res','Natijalar'],['plan','Dars rejalari'],['crit','Baholash'],['note','Eslatmalar']].map(([k,n])=>`<button type="button" role="tab" aria-selected="${k===tab}" data-k="${k}">${n}</button>`).join('')}</div>`);
+ tabs.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>teacher(b.dataset.k));
+ const scr=el(`<div class="screen gut" style="padding-block:6px 24px"></div>`);
+ app.append(top,tabs,scr);
+ if(tab==='res')tRes(scr);if(tab==='plan')tPlan(scr);if(tab==='crit')tCrit(scr);if(tab==='note')tNote(scr);
+}
+function tRes(scr){
+ scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.1rem">O‘quvchilar natijalari</h2>
+  <p class="sub">O‘quvchi bosh sahifada «Nátiyjeni muǵallimge jiberiw» tugmasini bosib, kodini sizga yuboradi (masalan, Telegram guruhiga). Kodlarni shu yerga qo‘ying – bir yoki bir nechta kodni birdan qo‘yish mumkin. Ma’lumotlar faqat shu qurilmada saqlanadi.</p>
+  <textarea rows="4" placeholder="QG8-... kodlarini shu yerga qo‘ying"></textarea>
+  <div class="row" style="justify-content:flex-start"><button type="button" class="btn" data-add>Qo‘shish</button><span class="cap" data-msg aria-live="polite"></span></div></div>`));
+ const card=scr.lastChild,ta=card.querySelector('textarea');
+ card.querySelector('[data-add]').onclick=()=>{const codes=ta.value.match(/QG8-[A-Za-z0-9_-]+/g)||[];let add=0,bad=0;
+  codes.forEach(cd=>{const r=readCode(cd);if(!r||!r.name){bad++;return;}const i=P.cls.findIndex(x=>x.name.toLowerCase()===r.name.toLowerCase()&&x.cls===r.cls);
+   if(i>=0){if(r.ts>=P.cls[i].ts)P.cls[i]=r;}else P.cls.push(r);add++;});
+  save();ta.value='';card.querySelector('[data-msg]').textContent=codes.length?`${add} ta kod qo‘shildi${bad?`, ${bad} ta kod noto‘g‘ri`:''}.`:'Kod topilmadi.';renderTable();};
+ const wrap=el('<div class="card"></div>');scr.append(wrap);
+ function renderTable(){
+  const classes=[...new Set(P.cls.map(x=>x.cls))].sort();
+  if(!P.cls.length){wrap.innerHTML='<h2 class="h" style="font-size:1.05rem">Sinf jadvali</h2><p class="sub">Hali natija yo‘q. Birinchi kodni yuqoriga qo‘ying.</p><p class="cap">Sinash uchun o‘zingiz ham bosh sahifada istalgan mavzuni bajarib, kodni shu yerga qo‘yishingiz mumkin.</p>';return;}
+  let sel=wrap.dataset.cls||classes[0];if(!classes.includes(sel))sel=classes[0];
+  const rows=P.cls.filter(x=>x.cls===sel).sort((a,b)=>a.name.localeCompare(b.name));
+  const avg=x=>{const v=Object.values(x.res).map(r=>r.p);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):null};
+  const colAvg=n=>{const v=rows.map(x=>x.res[n]?.p).filter(v=>v!=null);return v.length?Math.round(v.reduce((a,b)=>a+b,0)/v.length):null};
+  wrap.innerHTML=`<div class="row" style="justify-content:space-between"><h2 class="h" style="font-size:1.05rem">Sinf jadvali</h2><div class="chips">${classes.map(c=>`<button type="button" class="chip" aria-pressed="${c===sel}" data-c="${c}">${c}</button>`).join('')}</div></div>
+   <div class="tbl wide"><table class="gtab"><thead><tr><th>№</th><th>O‘quvchi</th>${TOPICS.map(t=>`<th class="r" title="${t.title}">${t.n}</th>`).join('')}<th class="r">O‘rt.</th><th class="r">Baho</th></tr></thead>
+   <tbody class="num">${rows.map((x,i)=>{const a=avg(x);return `<tr><td>${i+1}</td><td class="nm">${x.name}</td>${TOPICS.map(t=>{const r=x.res[t.n];return `<td class="r ${r?(r.p>=86?'g5':r.p>=71?'g4':r.p>=56?'g3':'g2'):''} ${r&&r.d<t.missions.length?'part':''}" title="${r?r.d+'/'+t.missions.length+' bo‘lim':''}">${r?r.p:''}</td>`}).join('')}<td class="r"><b>${a??''}</b></td><td class="r"><b>${grade(a)}</b></td></tr>`}).join('')}
+   <tr class="avgrow"><td></td><td>Sinf o‘rtachasi</td>${TOPICS.map(t=>{const v=colAvg(t.n);return `<td class="r">${v??''}</td>`}).join('')}<td></td><td></td></tr></tbody></table></div>
+   <p class="cap">Raqamlar – bajarilgan bo‘limlar bo‘yicha to‘g‘ri javoblar foizi. <i>Kursiv</i> – mavzu hali to‘liq tugallanmagan. Bo‘sh katak – mavzu boshlanmagan.</p>
+   <div class="row" style="justify-content:flex-start"><button type="button" class="btn sm" data-tsv>Excel uchun nusxalash</button><button type="button" class="btn ghost sm" data-clear>${sel} sinfini o‘chirish</button></div><textarea class="code" rows="3" hidden readonly></textarea><p class="cap" data-st aria-live="polite"></p>`;
+  wrap.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{wrap.dataset.cls=b.dataset.c;renderTable()});
+  wrap.querySelector('[data-tsv]').onclick=()=>{const tsv=['№\tO‘quvchi\tSinf\t'+TOPICS.map(t=>t.n+'-mavzu').join('\t')+'\tO‘rtacha\tBaho'].concat(rows.map((x,i)=>[i+1,x.name,x.cls,...TOPICS.map(t=>x.res[t.n]?.p??''),avg(x)??'',grade(avg(x))].join('\t'))).join('\n');
+   const ta=wrap.querySelector('textarea.code'),st=wrap.querySelector('[data-st]');ta.value=tsv;const fb=()=>{ta.hidden=false;ta.focus();ta.select();st.textContent='Jadval belgilandi – Ctrl+C bilan nusxalab, Excelga qo‘ying.'};
+   try{navigator.clipboard.writeText(tsv).then(()=>st.textContent='Nusxalandi. Excel yoki Google Sheetsga qo‘ying (Ctrl+V).',fb)}catch(e){fb()}};
+  let armed=false;wrap.querySelector('[data-clear]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Ishonchingiz komilmi? Yana bosing';return;}P.cls=P.cls.filter(x=>x.cls!==sel);save();renderTable();};
+ }
+ renderTable();
+}
+function tPlan(scr){
+ scr.append(el(`<p class="sub">Har mavzu uchun 45 daqiqalik dars rejasi. Reja ilovadagi bo‘limlar asosida tuzilgan; sinfingizga moslab o‘zgartiring.</p>`));
+ TOPICS.forEach(t=>{const learn=t.missions.filter(m=>!m.quiz),quiz=t.missions.find(m=>m.quiz),tasks=(quiz&&quiz.tasks)||[];
+  const d=el(`<details class="card plan"><summary><b>${t.n}-mavzu.</b> ${t.title} <span class="cap">· ${t.pages}-bet</span></summary>
+   <div class="pl"><p><b>Maqsad:</b> o‘quvchilar «${t.title}» mavzusidagi asosiy tushunchalar, raqamlar va xarita obyektlarini biladi, ularni misollar bilan tushuntira oladi.</p>
+   <ol class="steps">
+    <li><span class="tm">5 daq</span><div><b>Kirish.</b> Oldingi mavzuni takrorlash, uy vazifasini tekshirish. Mavzu savolini qo‘yish: «${t.intro.replace(/<[^>]+>/g,'')}»</div></li>
+    <li><span class="tm">15 daq</span><div><b>Yangi mavzu.</b> Darslikning ${t.pages}-betlari va ilovadagi bo‘limlar: ${learn.slice(0,Math.ceil(learn.length/2)).map(m=>'«'+m.title+'»').join(', ')||'—'}. Proyektor orqali birga ko‘rish tavsiya etiladi${learn.some(m=>m.steps.some(s=>/3d/.test(s.type)))?' (3D modelni sinfda birga aylantirib ko‘ring)':''}.</div></li>
+    <li><span class="tm">15 daq</span><div><b>Mustahkamlash.</b> O‘quvchilar juftlikda yoki mustaqil bajaradi: ${learn.slice(Math.ceil(learn.length/2)).map(m=>'«'+m.title+'»').join(', ')||'darslikdagi topshiriqlar'}.</div></li>
+    <li><span class="tm">7 daq</span><div><b>Nazorat.</b> ${quiz?`«${quiz.title}» (${quiz.steps.length} savol). Natija avtomatik hisoblanadi.`:'Og‘zaki so‘rov va ilovadagi mashqlar natijasi.'}</div></li>
+    <li><span class="tm">3 daq</span><div><b>Uy vazifasi.</b> ${tasks.length?tasks.join(' '):'Darslikdagi «Soraw hám tapsırmalar».'} O‘quvchi natija kodini o‘qituvchiga yuboradi.</div></li>
+   </ol></div></details>`);scr.append(d);});
+}
+function tCrit(scr){
+ scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.1rem">Baholash mezonlari</h2>
+  <p class="sub">Ilova har bir bo‘lim uchun to‘g‘ri bajarilgan topshiriqlar ulushini hisoblaydi. Mavzu natijasi – bajarilgan bo‘limlar o‘rtachasi; jadvalda mavzu to‘liq tugallanmagan bo‘lsa, raqam kursivda ko‘rsatiladi. Test savollari, xarita, saralash, juftlash va hisoblash topshiriqlari hisobga olinadi; o‘tkazib yuborilgan savol 0 ball.</p>
+  <div class="tbl"><table><thead><tr><th>Natija</th><th>Baho</th><th>Izoh</th></tr></thead><tbody>
+   <tr><td class="num">86–100 %</td><td><span class="pchip g5">5</span></td><td>Mavzuni to‘liq o‘zlashtirgan, raqam va obyektlarni aniq biladi</td></tr>
+   <tr><td class="num">71–85 %</td><td><span class="pchip g4">4</span></td><td>Asosiy tushunchalarni biladi, ayrim xatolar bor</td></tr>
+   <tr><td class="num">56–70 %</td><td><span class="pchip g3">3</span></td><td>Qisman o‘zlashtirgan, takrorlash kerak</td></tr>
+   <tr><td class="num">0–55 %</td><td><span class="pchip g2">2</span></td><td>Mavzuni qayta o‘rganish kerak</td></tr></tbody></table></div>
+  <p class="cap">Bu tavsiya etiladigan shkala. Yakuniy bahoni o‘qituvchi og‘zaki javob, daftar va loyiha ishlarini ham hisobga olib qo‘yadi.</p></div>`));
+ scr.append(el(`<div class="card"><h2 class="h" style="font-size:1.05rem">Ilova bilan ishlash tartibi</h2><ul class="ul">
+  <li>Dars boshida o‘quvchilar ism va sinfini bir marta kiritadi.</li><li>Natijalar o‘quvchi qurilmasida saqlanadi; bo‘limni qayta bajarsa, eng yaxshi natija olinadi.</li>
+  <li>Hafta oxirida o‘quvchilar kodini yuboradi – siz «Natijalar» bo‘limiga qo‘yasiz. Bir o‘quvchining yangi kodi eskisini almashtiradi.</li>
+  <li>Kod oddiy tekshiruv belgisiga ega: qo‘lda o‘zgartirilgan kod qabul qilinmaydi.</li></ul></div>`));
+}
+function tNote(scr){
+ const c=el(`<div class="card"><h2 class="h" style="font-size:1.1rem">Darslikda tekshirilishi kerak bo‘lgan raqamlar</h2><ul class="ul">${DATA.errata.map(e=>`<li>${e}</li>`).join('')}</ul></div>`);
+ const r=el(`<div class="card"><h2 class="h" style="font-size:1.05rem">Shu qurilmadagi ma’lumotlar</h2><p class="sub">Bu qurilmadagi o‘quvchi natijalarini o‘chirish (sinf jadvaliga ta’sir qilmaydi).</p><div class="row" style="justify-content:flex-start"><button type="button" class="btn ghost sm" data-reset>Natijalarni o‘chirish</button></div></div>`);
+ let armed=false;r.querySelector('[data-reset]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Ishonchingiz komilmi? Yana bosing';return;}const cls=P.cls,pr=P.profile;P={done:{},stars:{},notes:{},sc:{},cls,profile:pr};save();e.target.textContent='O‘chirildi';};
+ scr.append(c,r);
 }
 home();
 
