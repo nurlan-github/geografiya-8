@@ -388,6 +388,13 @@ textarea.code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem
 .dw.sad .dw-drop{display:none}
 @keyframes dwNodYes{0%,100%{transform:translateY(0)}40%{transform:translateY(-4px)}}
 .gtab td.part{font-style:italic;opacity:.75}
+.homefoot{display:grid;gap:4px;text-align:center;margin-top:8px;padding-top:12px;border-top:1px solid var(--line)}
+.homefoot .row{gap:18px}
+.cred{display:grid;grid-template-columns:minmax(110px,max-content) 1fr;gap:8px 14px;margin:0;font-size:.9rem}
+.cred dt{font-weight:800;color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;padding-top:2px}
+.cred dd{margin:0;line-height:1.45}
+.about{display:grid;gap:12px}
+@media (max-width:480px){.cred{grid-template-columns:1fr;gap:2px}.cred dd{margin-bottom:8px}}
 </style>
 <style>[hidden]{display:none!important}img{max-width:100%}body{margin:0}:root{padding-top:env(safe-area-inset-top);padding-bottom:env(safe-area-inset-bottom)}</style>
 </head>
@@ -1327,7 +1334,8 @@ function home(){
   TOPICS.filter(t=>t.ch===ch).forEach(t=>{const d=topicDone(t),n=t.missions.length,p=topicPct(t);
    const b=el(`<button type="button" class="trow ${d===n?'done':''}"><span class="tnum num">${t.n}</span><span class="tl"><b>${t.title}</b><span class="tmeta">${t.prac?'Ámeliy shınıǵıw · ':''}${t.pages}-bet · ${d}/${n} bólim</span><span class="tbar"><i style="width:${d/n*100}%"></i></span></span>${pctChip(p)}</button>`);
    b.onclick=()=>topic(t);list.append(b);});scr.append(list);});
- const tl=el('<button type="button" class="linkbtn">Muǵallim paneli</button>');tl.onclick=teacher;scr.append(tl);
+ const foot=el(`<div class="homefoot"><p class="cap">Sabaqlıq avtorları: I.R. Turdımambetov, O.U. Dauletbaev, K.J. Allanazarov, K.K. Uzakbaev · Ǵafur Ǵulam atındaǵı baspa, 2025</p><div class="row"><button type="button" class="linkbtn" data-about>Sabaqlıq haqqında</button><button type="button" class="linkbtn" data-teach>Muǵallim paneli</button></div></div>`);
+ foot.querySelector('[data-about]').onclick=about;foot.querySelector('[data-teach]').onclick=()=>teacher();scr.append(foot);
  app.append(head,scr);setTimeout(()=>say(msg,!started?'wave':null),250);
 }
 
@@ -1492,6 +1500,26 @@ function tNote(scr){
  const r=el(`<div class="card"><h2 class="h" style="font-size:1.05rem">Shu qurilmadagi ma’lumotlar</h2><p class="sub">Bu qurilmadagi o‘quvchi natijalarini o‘chirish (sinf jadvaliga ta’sir qilmaydi).</p><div class="row" style="justify-content:flex-start"><button type="button" class="btn ghost sm" data-reset>Natijalarni o‘chirish</button></div></div>`);
  let armed=false;r.querySelector('[data-reset]').onclick=e=>{if(!armed){armed=true;e.target.textContent='Ishonchingiz komilmi? Yana bosing';return;}const cls=P.cls,pr=P.profile;P={done:{},stars:{},notes:{},sc:{},cls,profile:pr};save();e.target.textContent='O‘chirildi';};
  scr.append(c,r);
+}
+
+/* ---- about the textbook (credits) ---- */
+function about(){
+ const box=el(`<div class="about"><span class="kicker">Sabaqlıq haqqında</span><h2 class="h" style="font-size:1.2rem">Qaraqalpaqstan geografiyası · 8-klass</h2>
+  <p class="sub">Bul elektron sabaqlıq tómendegi baspa sabaqlıǵı tiykarında islengen. Tekst, kartalar hám súwretler sabaqlıqtan alındı.</p>
+  <dl class="cred">
+   <dt>Sabaqlıq</dt><dd>«Geografiya» – qaraqalpaq tilinde oqıtılatuǵın ulıwma orta bilim beriw mektepleriniń 8-klası ushın sabaqlıq. Jańa basılım. Respublika bilimlendiriw orayı tárepinen usınıs etilgen.</dd>
+   <dt>Avtorlar</dt><dd>Turdımambetov Izimbet Raxmetovich<br>Dauletbaev Oybek Umirbekovich<br>Allanazarov Keunimjay Jannazarovich<br>Uzakbaev Koblan Keunimjay ulı</dd>
+   <dt>Pikir bildiriwshiler</dt><dd>Utepova Genjexan Baltabaevna – Ájiniyaz atındaǵı NMPI Geografiya kafedrası baslıǵı, g.i.k., docent<br>Iskenderov Alisher Bazarbaevich – Ájiniyaz atındaǵı NMPI Geografiya kafedrası aǵa oqıtıwshısı<br>Tajenov Azamat Orınbaevich – Nókis qalası 1-sanlı qánigelestirilgen mekteptiń joqarı kategoriyalı geografiya muǵallimi<br>Ataniyazova Qalligúl Erejepovna – Nókis qalası 22-sanlı mekteptiń joqarı kategoriyalı geografiya muǵallimi</dd>
+   <dt>Kartalar</dt><dd>G.i.k., docent A. Ibraimova redaktorlawı tiykarında</dd>
+   <dt>Redaktor</dt><dd>Qalilaeva Rita Nagmetullaevna</dd>
+   <dt>Korrektor</dt><dd>Saypov Alisher Azatovich</dd>
+   <dt>Xudojnik</dt><dd>Farmonov Sarvar To‘lqinovich</dd>
+   <dt>Betlewshi-dizayner</dt><dd>Saloxitdinov Ixvoldin Sirojitdinovich</dd>
+   <dt>Baspa</dt><dd>Ǵafur Ǵulam atındaǵı baspa-poligrafiyalıq dóretiwshilik úyi, Tashkent – 2025<br>Baspa licenziyası № 9341, 08.10.2020<br>ISBN 978-9910-584-78-7</dd>
+  </dl>
+  <p class="cap">© Ǵafur Ǵulam atındaǵı baspa-poligrafiyalıq dóretiwshilik úyi, 2025. Elektron versiyadaǵı 3D modeller sxematik bolıp, sabaqlıq kartaları tiykarında dúzildi.</p>
+  <div class="row" style="justify-content:flex-start"><button type="button" class="btn" data-close>Jabıw</button></div></div>`);
+ box.querySelector('[data-close]').onclick=closeSheet;sheet(box);
 }
 home();
 
